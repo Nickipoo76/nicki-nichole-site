@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Calculator, Gauge } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import content from "../content";
 import { Reveal } from "../motion";
 
@@ -12,19 +11,18 @@ export default function LeadToolsBand() {
           <h2 className="font-display text-balance text-2xl font-semibold leading-tight text-cream sm:text-4xl">
             {c.heading}
           </h2>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link to="/lead-leak-score" data-testid="band-quiz-cta" className="btn-gold">
-              <Gauge size={18} aria-hidden="true" />
-              {c.quizCta}
-            </Link>
-            <Link
-              to="/lead-calculator"
-              data-testid="band-calculator-cta"
-              className="btn-ghost text-cream hover:bg-cream hover:text-plum"
+          <p className="mx-auto mt-4 max-w-2xl text-base text-cream/80 sm:text-lg">{c.text}</p>
+          <div className="mt-8 flex justify-center">
+            <a
+              href={c.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="band-tools-cta"
+              className="btn-gold"
             >
-              <Calculator size={18} aria-hidden="true" />
-              {c.calculatorCta}
-            </Link>
+              {c.cta}
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
           </div>
         </Reveal>
       </div>

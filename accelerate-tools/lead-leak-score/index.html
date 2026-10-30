@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lead Leak Score | Accelerate Marketing</title>
+  <meta name="description" content="An 8-question score that shows tax pros, real estate agents and other service businesses where they're losing leads, and how to plug the leaks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="https://getacceleratemarketing.com">Accelerate <span>Marketing</span></a>
+      <nav aria-label="Main">
+        <a href="/">Free tools</a>
+        <a href="https://getacceleratemarketing.com/services">Services</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tool">
+    <div class="wrap narrow">
+      <div class="tool-head">
+        <span class="eyebrow">Free 2-minute score</span>
+        <h1>Where are your leads leaking?</h1>
+        <p>Eight quick questions. Tap the answer that sounds most like you.</p>
+      </div>
+
+      <div class="panel">
+        <div class="bar" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="bar"></div></div>
+
+        <div id="question-view">
+          <p class="step-label" id="step-label" aria-live="polite"></p>
+          <p class="q-area" id="q-area"></p>
+          <h2 class="q-text" id="q-text" tabindex="-1"></h2>
+          <div class="choices" id="choices"></div>
+          <button type="button" class="link-btn hidden" id="back">← Back</button>
+        </div>
+
+        <div id="result-view" class="hidden">
+          <div class="score">
+            <p class="eyebrow" style="color:#8a6a1c">Your Lead Leak Score</p>
+            <div class="num" id="score-num" tabindex="-1"></div>
+            <div class="out">out of 100</div>
+            <div class="label" id="score-label"></div>
+          </div>
+          <h2 style="font-size:1.3rem;margin-top:28px">Your top leaks</h2>
+          <ul class="leaks" id="leaks"></ul>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://getacceleratemarketing.com/freescan">Book my free Lead Leak Scan</a>
+            <button type="button" class="btn btn-ghost" id="retake">Retake the quiz</button>
+          </div>
+
+          <form class="email" name="lead-leak-score" method="POST" data-netlify="true" netlify-honeypot="company" id="email-form">
+            <input type="hidden" name="form-name" value="lead-leak-score" />
+            <input type="hidden" name="score" />
+            <input type="hidden" name="leaks" />
+            <p class="hidden"><label>Don't fill this out: <input name="company" /></label></p>
+            <h2>Email me my results</h2>
+            <div class="row">
+              <label class="hidden" for="first-name">First name</label>
+              <input id="first-name" type="text" name="first-name" placeholder="First name" autocomplete="given-name" />
+              <label class="hidden" for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+              <button class="btn btn-gold" type="submit">Send my results</button>
+            </div>
+            <p class="status" id="email-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+      <p class="center" style="margin-top:20px"><a href="/lead-calculator">Next: see what lost leads cost you →</a></p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 Accelerate Marketing</span>
+      <span><a href="/">More free tools</a> · <a href="https://www.instagram.com/accelerate.marketing/">Instagram</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // ===== EDIT QUIZ TEXT HERE =====
+    const QUESTIONS = [
+      { area: "Your Google presence", question: "When someone Googles your business name, what do they see?",
+        answers: ["Nothing or an old listing", "A basic listing", "A full Google profile with photos", "A full profile with recent reviews and posts"],
+        tip: "Claim your Google Business Profile and add photos, services and a fresh post this week." },
+      { area: "Your reviews", question: "How many Google reviews do you have?",
+        answers: ["Under 10", "10–25", "26–50", "50+"],
+        tip: "Ask every happy client for a Google review right after a win, with a short direct link." },
+      { area: "Your response speed", question: "How fast do you usually reply to a new inquiry?",
+        answers: ["Next day or later", "Within a few hours", "Within an hour", "Within 5 minutes"],
+        tip: "Set up an instant auto-reply so every new inquiry hears from you within minutes." },
+      { area: "Your follow-up", question: "How many times do you follow up with a lead who goes quiet?",
+        answers: ["Never", "Once", "2–3 times", "4+ times with a set plan"],
+        tip: "Give every lead a simple 4-touch follow-up plan; most people say yes after the second or third contact." },
+      { area: "Your lead tracking", question: "Where do you track your leads?",
+        answers: ["Nowhere", "My head, texts or email", "A spreadsheet", "A CRM"],
+        tip: "Move every lead into one list or simple CRM so nobody gets forgotten." },
+      { area: "Your past-client contact", question: "How often do you contact past clients?",
+        answers: ["Never", "Only at renewal or tax time", "A few times a year", "Monthly"],
+        tip: "Put past clients on a simple monthly touch, even a short email, so you stay first in mind." },
+      { area: "Your website", question: "Does your website tell visitors exactly what to do next?",
+        answers: ["No website", "Yes, but it's outdated", "Mostly", "Yes, one clear button to book or call"],
+        tip: "Give visitors one clear next step: a single book-or-call button near the top of the page." },
+      { area: "Your lead sources", question: "How do most new clients find you right now?",
+        answers: ["I'm not sure", "Mostly word of mouth", "A mix of word of mouth and online", "Mostly online and campaigns"],
+        tip: "Track where each new client comes from for one month, so you know what to do more of." }
+    ];
+    const LABELS = [{ max: 39, label: "Major leaks" }, { max: 69, label: "Leaking leads" }, { max: 100, label: "Mostly sealed" }];
+    // ===============================
+
+    const $ = (id) => document.getElementById(id);
+    let step = 0, answers = [];
+    const total = QUESTIONS.length;
+
+    function setProgress(p) {
+      $("bar").style.width = p + "%";
+      $("bar").parentElement.setAttribute("aria-valuenow", p);
+    }
+
+    function renderQuestion(focus) {
+      const q = QUESTIONS[step];
+      $("step-label").textContent = `Question ${step + 1} of ${total}`;
+      $("q-area").textContent = q.area;
+      $("q-text").textContent = q.question;
+      $("choices").innerHTML = "";
+      q.answers.forEach((a, i) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "choice"; b.textContent = a;
+        b.addEventListener("click", () => pick(i));
+        $("choices").appendChild(b);
+      });
+      $("back").classList.toggle("hidden", step === 0);
+      setProgress(Math.round((step / total) * 100));
+      if (focus) $("q-text").focus();
+    }
+
+    function pick(i) {
+      answers[step] = i;
+      if (step === total - 1) showResult(); else { step++; renderQuestion(true); }
+    }
+
+    function showResult() {
+      const sum = answers.reduce((a, b) => a + (b || 0), 0);
+      const score = Math.round((sum / (total * 3)) * 100);
+      const label = LABELS.find((l) => score <= l.max).label;
+      const leaks = QUESTIONS.map((q, i) => ({ ...q, pts: answers[i] ?? 0, i }))
+        .sort((a, b) => a.pts - b.pts || a.i - b.i).slice(0, 3);
+      $("score-num").textContent = score;
+      $("score-label").textContent = label;
+      $("leaks").innerHTML = leaks.map((l) => `<li><strong>${l.area}</strong><span>${l.tip}</span></li>`).join("");
+      const f = $("email-form");
+      f.score.value = `${score} / 100 — ${label}`;
+      f.leaks.value = leaks.map((l) => l.area).join("; ");
+      $("question-view").classList.add("hidden");
+      $("result-view").classList.remove("hidden");
+      setProgress(100);
+      $("score-num").focus();
+    }
+
+    $("back").addEventListener("click", () => { if (step > 0) { step--; renderQuestion(true); } });
+    $("retake").addEventListener("click", () => {
+      step = 0; answers = []; $("email-status").textContent = "";
+      $("result-view").classList.add("hidden"); $("question-view").classList.remove("hidden");
+      renderQuestion(true);
+    });
+
+    $("email-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const s = $("email-status");
+      s.textContent = "Sending…";
+      try {
+        const res = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(new FormData(e.target)).toString()
+        });
+        if (!res.ok) throw new Error();
+        s.textContent = "Thanks! We've got your results and we'll follow up by email.";
+        e.target.reset();
+      } catch { s.textContent = "Something went wrong. Please try again."; }
+    });
+
+    renderQuestion(false);
+  </script>
+</body>
+</html>

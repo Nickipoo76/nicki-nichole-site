@@ -62,20 +62,6 @@ export default function Nav() {
 
         <div className="hidden items-center gap-6 md:flex">
           <Link
-            to="/lead-leak-score"
-            data-testid="nav-score-link"
-            className="text-sm font-semibold text-plum no-underline transition-colors duration-300 hover:text-gold"
-          >
-            {n.score}
-          </Link>
-          <Link
-            to="/lead-calculator"
-            data-testid="nav-calculator-link"
-            className="text-sm font-semibold text-plum no-underline transition-colors duration-300 hover:text-gold"
-          >
-            {n.calculator}
-          </Link>
-          <Link
             to="/about"
             data-testid="nav-about-link"
             className="text-sm font-semibold text-plum no-underline transition-colors duration-300 hover:text-gold"
@@ -125,8 +111,6 @@ export default function Nav() {
             <nav aria-label="Mobile" className="flex flex-col gap-6">
               {[
                 { label: n.home, to: "/", tid: "mobile-nav-home" },
-                { label: n.score, to: "/lead-leak-score", tid: "mobile-nav-score" },
-                { label: n.calculator, to: "/lead-calculator", tid: "mobile-nav-calculator" },
                 { label: n.about, to: "/about", tid: "mobile-nav-about" },
                 { label: n.contact, to: "/#contact", tid: "mobile-nav-contact" },
               ].map((item, i) => (
