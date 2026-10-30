@@ -5,13 +5,13 @@
 
 [[redirects]]
   from = "/lead-leak-score"
-  to = "https://accelerate-free-tools.netlify.app/lead-leak-score"
+  to = "https://accelerate-lead-tools.netlify.app/lead-leak-score"
   status = 301
   force = true
 
 [[redirects]]
   from = "/lead-calculator"
-  to = "https://accelerate-free-tools.netlify.app/lead-calculator"
+  to = "https://accelerate-lead-tools.netlify.app/lead-calculator"
   status = 301
   force = true
 

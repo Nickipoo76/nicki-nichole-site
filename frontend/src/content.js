@@ -29,7 +29,7 @@ const content = {
     heading: "Not sure where your leads are going?",
     text: "My agency, Accelerate Marketing, has free tools to find out: a 2-minute Lead Leak Score, a lost-lead calculator, guides and trainings.",
     cta: "Get the free tools",
-    url: "https://accelerate-free-tools.netlify.app",
+    url: "https://accelerate-lead-tools.netlify.app",
   },
 
   // ---- Links (swap placeholders when ready) -------------------------------
