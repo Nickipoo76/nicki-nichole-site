@@ -14,6 +14,7 @@ function useSmoothScroll() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    window.__lenis = lenis;
     let raf;
     const loop = (time) => {
       lenis.raf(time);
@@ -23,6 +24,7 @@ function useSmoothScroll() {
     return () => {
       cancelAnimationFrame(raf);
       lenis.destroy();
+      window.__lenis = null;
     };
   }, []);
 }
@@ -31,14 +33,25 @@ function useSmoothScroll() {
 function ScrollManager() {
   const { pathname, hash, search } = useLocation();
   useEffect(() => {
+    const lenis = window.__lenis;
     if (hash) {
-      const el = document.getElementById(hash.slice(1));
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
+      // Retry briefly: the target may render a moment after a route change.
+      let tries = 0;
+      let timer;
+      const go = () => {
+        const el = document.getElementById(hash.slice(1));
+        if (el) {
+          if (lenis) lenis.scrollTo(el, { offset: -80 });
+          else el.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (tries++ < 20) {
+          timer = setTimeout(go, 100);
+        }
+      };
+      timer = setTimeout(go, 50);
+      return () => clearTimeout(timer);
     }
-    window.scrollTo({ top: 0, behavior: "instant" });
+    if (lenis) lenis.scrollTo(0, { immediate: true });
+    else window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname, hash, search]);
   return null;
 }

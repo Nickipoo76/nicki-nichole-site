@@ -78,21 +78,10 @@ export default function ContactForm() {
                 className="inline-flex items-center gap-3 font-semibold no-underline hover:text-gold"
               >
                 <Instagram size={20} aria-hidden="true" className="text-gold" />
-                Instagram · @wholesalingwithnicki
+                Instagram · @accelerate.marketing
               </a>
             </li>
-            <li>
-              <a
-                href={content.links.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="contact-tiktok-link"
-                className="inline-flex items-center gap-3 font-semibold no-underline hover:text-gold"
-              >
-                <TikTokIcon />
-                TikTok · @wholesalingwithnicki
-              </a>
-            </li>
+            
             {!isPlaceholder(content.links.linkedin) && (
               <li>
                 <a

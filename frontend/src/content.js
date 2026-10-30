@@ -155,7 +155,7 @@ const content = {
   links: {
     booking: "https://getacceleratemarketing.com/freescan",
     accelerate: "https://acceleratetaxandcredit.com",
-    instagram: "https://instagram.com/wholesalingwithnicki",
+    instagram: "https://www.instagram.com/accelerate.marketing/",
     tiktok: "https://tiktok.com/@wholesalingwithnicki",
     linkedin: "https://www.linkedin.com/in/nicholepaul",
     email: "support@iconicho.com",
