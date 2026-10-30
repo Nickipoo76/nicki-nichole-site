@@ -22,13 +22,16 @@ Build a fast, mobile-first, accessible personal brand site for Nicki Nichole (Ni
 - About page with story, credentials line, CTA back to contact; simple Privacy page.
 - Netlify Forms contact (honeypot, success state, error state) with `?topic=` URL preset wired to all in-page links.
 - Real values: booking https://getacceleratemarketing.com/freescan, taxes https://acceleratetaxandcredit.com, email support@iconicho.com, LinkedIn https://www.linkedin.com/in/nicholepaul, hiring text "Open to marketing consultant roles."
+- Repositioned all copy around lead generation (2026-07): hero "Leads on demand. Clients on repeat.", 6 service cards, new problems list, new meta title/description; no "referral"/"word of mouth" wording remains.
+- Pushed to GitHub: https://github.com/Nickipoo76/nicki-nichole-site (token's account is Nickipoo76, user expected nicholepx — flagged to user).
 - Design: plum #3B1F3A / cream #FAF6F0 / gold #C9A227 / blush #F3D9D6, Fraunces + Inter, gold underline accents, masked hero reveal, slow marquee proof strip, parallax hero/why-faster, grain overlay, SVG monogram favicon.
 - SEO: title, description, canonical, OG/Twitter tags, Person JSON-LD, WCAG AA contrast, skip link, alt text, focus states, reduced-motion support.
 - README with edit/photos/deploy instructions.
 
 ## Backlog / remaining
-- P0: Push to GitHub repo `nicki-nichole-site` (needs the user's GitHub integration connected in Emergent) and Netlify deploy + domain.
-- P0: User commits real `headshot-main.jpg`, `monroe.jpg`, `og-image.jpg` to `public/images/`.
+- P0: Confirm the GitHub account — repo is under Nickipoo76; if it should be nicholepx, transfer or re-push with a token for that account.
+- P0: Netlify deploy + domain (import the GitHub repo in Netlify; netlify.toml is preconfigured).
+- P0: User commits real `headshot-main.jpg`, `monroe.jpg`, `og-image.jpg` to `frontend/public/images/`.
 - P1: Testimonials once approved (placeholder note in content.js).
 - P1: Lighthouse audit on the deployed Netlify URL.
 - P2: Test form submissions end-to-end on Netlify (Forms only registers on a real Netlify deploy).
