@@ -99,7 +99,7 @@
     <div class="wrap">
       <span class="eyebrow">Apartment cleaning specialists · Seattle</span>
       <h1>Get your cleaning price in 60 seconds</h1>
-      <p>Move-in, move-out, deep and bi-weekly cleaning for Seattle apartments and condos. Pick your options and see your price range instantly.</p>
+      <p>Move-in, move-out, deep and bi-weekly cleaning for Seattle apartments and condos. Pick your options and see your price instantly.</p>
     </div>
   </section>
 
@@ -118,7 +118,7 @@
           </div>
           <p style="color:var(--muted);font-size:.85rem;margin:6px 0 0">Steps of half a bathroom.</p>
         </fieldset>
-        <fieldset><legend>4. Add-ons</legend><div class="opts two" id="addon-opts"></div></fieldset>
+        <fieldset id="addon-field"><legend>4. Add-ons</legend><div class="opts two" id="addon-opts"></div></fieldset>
       </form>
 
       <aside class="summary" aria-live="polite">
@@ -209,8 +209,11 @@
         <label for="${name}-${it.id}">${label(it)}${sub ? `<small>${sub(it)}</small>` : ""}</label></div>`).join("");
       container.querySelectorAll("input").forEach((i) => i.addEventListener("change", () => { state[name] = i.value; render(); }));
     }
+    const priced = (a) => a.price != null;
     function addons() {
-      $("addon-opts").innerHTML = S.addOns.map((a) => {
+      const list = S.addOns.filter((a) => priced(a) || a.includedIn.includes(state.service));
+      $("addon-field").classList.toggle("hidden", list.length === 0);
+      $("addon-opts").innerHTML = list.map((a) => {
         const inc = a.includedIn.includes(state.service);
         return `<div class="opt"><input type="checkbox" id="ad-${a.id}" value="${a.id}" ${inc ? "checked disabled" : state.addons.has(a.id) ? "checked" : ""} />
         <label for="ad-${a.id}">${a.name}<small>${inc ? '<span class="inc">Included</span>' : "+" + usd(a.price)}</small></label></div>`;
@@ -224,24 +227,31 @@
       const svc = S.services.find((s) => s.id === state.service);
       const unit = S.units.find((u) => u.id === state.unit);
       if (rebuildAddons) addons();
-      const lines = [[`${svc.name}, ${unit.name}`, svc.prices[state.unit]]];
-      const extra = state.baths - 1, full = Math.floor(extra), half = extra - full > 0 ? 1 : 0;
-      if (full) lines.push([`${full} extra bathroom${full > 1 ? "s" : ""}`, full * S.extraBathroom]);
+      const base = svc.prices[state.unit];
+      const hrs = svc.hours && svc.hours[state.unit];
+      const lines = [[`${svc.name}, ${unit.name}${hrs ? ` (about ${hrs})` : ""}`, base]];
+      const extra = Math.max(0, state.baths - unit.includedBaths), full = Math.floor(extra), half = extra - full > 0 ? 1 : 0;
+      if (full) lines.push([`${full} extra bathroom${full > 1 ? "s" : ""}`, S.extraBathroom == null ? null : full * S.extraBathroom]);
       if (half) lines.push(["Half bathroom", S.halfBathroom]);
-      S.addOns.forEach((a) => { if (state.addons.has(a.id) && !a.includedIn.includes(svc.id)) lines.push([a.name, a.price]); });
-      const total = lines.reduce((t, l) => t + l[1], 0);
-      const lo = total * (1 - S.RANGE), hi = total * (1 + S.RANGE);
-      const range = `${usd(lo)}–${usd(hi)}`;
+      S.addOns.forEach((a) => { if (state.addons.has(a.id) && priced(a) && !a.includedIn.includes(svc.id)) lines.push([a.name, a.price]); });
+      let range;
+      if (base == null) range = "Custom quote";
+      else {
+        const total = lines.reduce((t, l) => t + (l[1] || 0), 0);
+        const open = lines.some((l) => l[1] == null);
+        range = S.RANGE ? `${usd(total * (1 - S.RANGE))}–${usd(total * (1 + S.RANGE))}` : usd(total);
+        if (open) range = "From " + range;
+      }
       $("price").textContent = range;
       $("bar-price").textContent = range;
-      $("per").textContent = svc.recurring ? "per visit, every two weeks" : "one-time cleaning";
-      $("lines").innerHTML = lines.map((l) => `<li><span>${l[0]}</span><span>${usd(l[1])}</span></li>`).join("");
+      $("per").textContent = base == null ? "Send a request and we'll price it for you" : svc.recurring ? "per visit, every two weeks" : "one-time cleaning";
+      $("lines").innerHTML = lines.map((l) => `<li><span>${l[0]}</span><span>${l[1] == null ? "Quoted" : usd(l[1])}</span></li>`).join("");
       $("bath-out").textContent = state.baths;
-      const chosen = S.addOns.filter((a) => state.addons.has(a.id) && !a.includedIn.includes(svc.id)).map((a) => a.name);
+      const chosen = S.addOns.filter((a) => state.addons.has(a.id) && priced(a) && !a.includedIn.includes(svc.id)).map((a) => a.name);
       const f = $("request-form");
       f.service.value = svc.name; f.unit.value = unit.name; f.bathrooms.value = state.baths;
-      f["add-ons"].value = chosen.join(", ") || "None"; f.estimate.value = range + (svc.recurring ? " per visit" : "") + (S.PRICES_CONFIRMED ? "" : " (sample prices)");
-      $("req-summary").textContent = `${svc.name} · ${unit.name} · ${state.baths} bath${state.baths === 1 ? "" : "s"} · estimate ${range}`;
+      f["add-ons"].value = chosen.join(", ") || "None"; f.estimate.value = range + (svc.recurring && base != null ? " per visit" : "") + (S.PRICES_CONFIRMED ? "" : " (sample prices)");
+      $("req-summary").textContent = `${svc.name} · ${unit.name} · ${state.baths} bath${state.baths === 1 ? "" : "s"} · ${base == null ? "custom quote" : "estimate " + range}`;
     }
 
     radio($("service-opts"), "service", S.services, state.service, (s) => s.name, (s) => s.note);

@@ -2,64 +2,68 @@
 //  SEATTLE EVERGREEN CLEAN – QUOTE CALCULATOR SETTINGS
 //  Change any number below and the calculator updates automatically.
 //
-//  ⚠️ ALL PRICES BELOW ARE SAMPLES. Replace them with your real prices,
-//  then set PRICES_CONFIRMED to true. Until then the page shows a
-//  "Sample prices" notice so visitors aren't quoted numbers you
-//  haven't approved.
+//  Prices match the Square booking page (checked Oct 30, 2026).
+//  A price of null shows "Custom quote" instead of a number.
+//  If you change a price in Square, change it here too.
 // =====================================================================
 
 window.QUOTE_SETTINGS = {
-  PRICES_CONFIRMED: false,
+  PRICES_CONFIRMED: true,
 
-  // How wide the shown range is (0.10 = shows 10% below to 10% above)
-  RANGE: 0.1,
+  // How wide the shown range is (0 = show the exact price)
+  RANGE: 0,
 
   // Real booking link (from seattleevergreenclean.com)
   BOOKING_URL: "https://book.squareup.com/appointments/0jfn9lbe2vpey4/location/CW0Y2705NWAX9/services",
 
-  // Base price per service, by unit size. SAMPLE – set real prices
+  // Price and time per service, by unit size (from Square)
   services: [
     {
       id: "moveout",
       name: "Move-In / Move-Out Cleaning",
       note: "Empty units only. Vacant apartment, utilities on.",
-      prices: { studio: 260, "1br": 300, "2br": 380, "3br": 460 }, // SAMPLE
+      prices: { studio: 275, "1br": 325, "2br": 425, "3br": 525 },
+      hours: { studio: "4 hr", "1br": "5 hr", "2br": "6.5 hr", "3br": "8 hr" },
       recurring: false
     },
     {
       id: "deep",
       name: "Deep Apartment Cleaning",
       note: "Top-to-bottom reset for occupied apartments.",
-      prices: { studio: 220, "1br": 260, "2br": 330, "3br": 400 }, // SAMPLE
+      prices: { studio: 225, "1br": 275, "2br": 350, "3br": null }, // 3BR not offered in Square yet
+      hours: { studio: "3.5 hr", "1br": "4.5 hr", "2br": "6 hr", "3br": null },
       recurring: false
     },
     {
       id: "biweekly",
       name: "Bi-Weekly Apartment Cleaning",
       note: "Every two weeks. Limited contracts available.",
-      prices: { studio: 120, "1br": 140, "2br": 170, "3br": 200 }, // SAMPLE (per visit)
+      prices: { studio: null, "1br": null, "2br": null, "3br": null }, // not priced yet
+      hours: {},
       recurring: true
     }
   ],
 
+  // includedBaths = bathrooms covered by the base price (Square: 2BR is 1–2 bath, 3BR is 2 bath)
   units: [
-    { id: "studio", name: "Studio" },
-    { id: "1br", name: "1 bedroom" },
-    { id: "2br", name: "2 bedrooms" },
-    { id: "3br", name: "3 bedrooms" }
+    { id: "studio", name: "Studio", includedBaths: 1 },
+    { id: "1br", name: "1 bedroom", includedBaths: 1 },
+    { id: "2br", name: "2 bedrooms", includedBaths: 2 },
+    { id: "3br", name: "3 bedrooms", includedBaths: 2 }
   ],
 
-  // Added for each bathroom beyond the first. SAMPLE
-  extraBathroom: 35,      // SAMPLE
-  halfBathroom: 20,       // SAMPLE
+  // Bathrooms beyond what's included. null = confirmed at walkthrough
+  extraBathroom: null,
+  halfBathroom: null,
 
-  // Add-ons. SAMPLE prices. "includedIn" = free with that service
+  // Add-ons. price null = hidden until you set a price.
+  // "includedIn" = free with that service (Square says move-out includes windows + appliances)
   addOns: [
-    { id: "fridge", name: "Inside fridge", price: 35, includedIn: ["moveout"] },     // SAMPLE
-    { id: "oven", name: "Inside oven", price: 35, includedIn: ["moveout"] },         // SAMPLE
-    { id: "cabinets", name: "Inside cabinets & drawers", price: 40, includedIn: ["moveout"] }, // SAMPLE
-    { id: "windows", name: "Interior windows", price: 40, includedIn: ["moveout"] }, // SAMPLE
-    { id: "balcony", name: "Balcony or patio", price: 25, includedIn: [] },          // SAMPLE
-    { id: "pethair", name: "Heavy pet hair", price: 30, includedIn: [] }             // SAMPLE
+    { id: "fridge", name: "Inside fridge", price: null, includedIn: ["moveout"] },
+    { id: "oven", name: "Inside oven", price: null, includedIn: ["moveout"] },
+    { id: "cabinets", name: "Inside cabinets & drawers", price: null, includedIn: [] },
+    { id: "windows", name: "Interior windows", price: null, includedIn: ["moveout"] },
+    { id: "balcony", name: "Balcony or patio", price: null, includedIn: [] },
+    { id: "pethair", name: "Heavy pet hair", price: null, includedIn: [] }
   ]
 };
