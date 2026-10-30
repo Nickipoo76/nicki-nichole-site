@@ -14,8 +14,8 @@ window.QUOTE_SETTINGS = {
   // How wide the shown range is (0 = show the exact price)
   RANGE: 0,
 
-  // Real booking link (from seattleevergreenclean.com)
-  BOOKING_URL: "https://book.squareup.com/appointments/0jfn9lbe2vpey4/location/CW0Y2705NWAX9/services",
+  // Seattle Evergreen Clean Square location (the old CW0Y... link was the A1 Success Group location)
+  BOOKING_URL: "https://book.squareup.com/appointments/0jfn9lbe2vpey4/location/L56ZHWCEZVYD2/services",
 
   // Price and time per service, by unit size
   services: [
@@ -31,8 +31,8 @@ window.QUOTE_SETTINGS = {
       id: "deep",
       name: "Deep Apartment Cleaning",
       note: "Top-to-bottom reset for occupied apartments.",
-      prices: { studio: 225, "1br": 275, "2br": 350, "3br": null }, // 3BR not on the price sheet
-      hours: { studio: "3.5 hr", "1br": "4.5 hr", "2br": "6 hr", "3br": null },
+      prices: { studio: 225, "1br": 275, "2br": 350, "3br": 450 }, // 3BR set by Nicki Oct 30
+      hours: { studio: "3.5 hr", "1br": "4.5 hr", "2br": "5 hr", "3br": "6 hr" },
       recurring: false
     },
     {
