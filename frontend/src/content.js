@@ -20,8 +20,135 @@ const content = {
   nav: {
     home: "Home",
     about: "About",
+    score: "Lead Leak Score",
+    calculator: "Lead Calculator",
     contact: "Contact",
     cta: "Book a free scan",
+  },
+
+  // ---- Homepage band: lead tools ------------------------------------------
+  leadTools: {
+    heading: "Not sure where your leads are going?",
+    quizCta: "Take the 2-minute Lead Leak Score",
+    calculatorCta: "Calculate what lost leads cost you",
+  },
+
+  // ---- Lead Leak Score quiz (/lead-leak-score) -----------------------------
+  quiz: {
+    metaTitle: "Lead Leak Score | Nicki Nichole",
+    metaDescription:
+      "An 8-question score that shows tax pros and real estate agents exactly where they're losing leads, and how to plug the leaks.",
+    eyebrow: "Free 2-minute score",
+    heading: "Where are your leads leaking?",
+    intro: "Eight quick questions. Tap the answer that sounds most like you.",
+    progressLabel: "Question {current} of {total}",
+    backLabel: "Back",
+    questions: [
+      {
+        area: "Your Google presence",
+        question: "When someone Googles your business name, what do they see?",
+        answers: [
+          "Nothing or an old listing",
+          "A basic listing",
+          "A full Google profile with photos",
+          "A full profile with recent reviews and posts",
+        ],
+        tip: "Claim your Google Business Profile and add photos, services and a fresh post this week.",
+      },
+      {
+        area: "Your reviews",
+        question: "How many Google reviews do you have?",
+        answers: ["Under 10", "10–25", "26–50", "50+"],
+        tip: "Ask every happy client for a Google review right after a win, with a short direct link.",
+      },
+      {
+        area: "Your response speed",
+        question: "How fast do you usually reply to a new inquiry?",
+        answers: ["Next day or later", "Within a few hours", "Within an hour", "Within 5 minutes"],
+        tip: "Set up an instant auto-reply so every new inquiry hears from you within minutes.",
+      },
+      {
+        area: "Your follow-up",
+        question: "How many times do you follow up with a lead who goes quiet?",
+        answers: ["Never", "Once", "2–3 times", "4+ times with a set plan"],
+        tip: "Give every lead a simple 4-touch follow-up plan; most people say yes after the second or third contact.",
+      },
+      {
+        area: "Your lead tracking",
+        question: "Where do you track your leads?",
+        answers: ["Nowhere", "My head, texts or email", "A spreadsheet", "A CRM"],
+        tip: "Move every lead into one list or simple CRM so nobody gets forgotten.",
+      },
+      {
+        area: "Your past-client contact",
+        question: "How often do you contact past clients?",
+        answers: ["Never", "Only at renewal or tax time", "A few times a year", "Monthly"],
+        tip: "Put past clients on a simple monthly touch, even a short email, so you stay first in mind.",
+      },
+      {
+        area: "Your website",
+        question: "Does your website tell visitors exactly what to do next?",
+        answers: [
+          "No website",
+          "Yes, but it's outdated",
+          "Mostly",
+          "Yes, one clear button to book or call",
+        ],
+        tip: "Give visitors one clear next step: a single book-or-call button near the top of the page.",
+      },
+      {
+        area: "Your lead sources",
+        question: "How do most new clients find you right now?",
+        answers: [
+          "I'm not sure",
+          "Mostly word of mouth",
+          "A mix of word of mouth and online",
+          "Mostly online and campaigns",
+        ],
+        tip: "Track where each new client comes from for one month, so you know what to do more of.",
+      },
+    ],
+    resultHeading: "Your Lead Leak Score",
+    scoreOutOf: "out of 100",
+    labels: [
+      { max: 39, label: "Major leaks" },
+      { max: 69, label: "Leaking leads" },
+      { max: 100, label: "Mostly sealed" },
+    ],
+    leaksHeading: "Your top leaks",
+    cta: "Book my free Lead Leak Scan",
+    emailHeading: "Email me my results",
+    emailPlaceholder: "you@example.com",
+    emailCta: "Send my results",
+    emailSuccess: "Done — your results are on their way to your inbox.",
+    emailError: "Something went wrong. Please try again.",
+    retake: "Retake the quiz",
+  },
+
+  // ---- Lost-lead calculator (/lead-calculator) ------------------------------
+  calculator: {
+    metaTitle: "Lost Lead Calculator | Nicki Nichole",
+    metaDescription:
+      "See what your lost leads are worth each month and each year, in dollars, with three quick numbers.",
+    eyebrow: "Free calculator",
+    heading: "What are your lost leads worth?",
+    intro: "Three numbers. That's all it takes.",
+    inputs: {
+      leads: { label: "Leads per month", help: "Calls, DMs, form fills" },
+      clients: { label: "New clients per month", help: "From those leads" },
+      value: { label: "Average value of one client", help: "In dollars" },
+    },
+    validation: "Clients can't be more than leads — check those two numbers.",
+    lostLine: "You're losing about {count} leads a month.",
+    toggleLabel: "If you won back…",
+    toggleOptions: [10, 20, 30],
+    results: {
+      clients: "extra clients a month",
+      monthly: "extra revenue a month",
+      yearly: "extra revenue a year",
+    },
+    note: "Based on your numbers. Nothing here is a guarantee.",
+    cta: "Find out where my leads are going",
   },
 
   // ---- Links (swap placeholders when ready) -------------------------------

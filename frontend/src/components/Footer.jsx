@@ -12,6 +12,20 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 text-center sm:px-8">
         <Wordmark dark />
         <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm">
+          <Link
+            to="/lead-leak-score"
+            data-testid="footer-score-link"
+            className="font-medium no-underline transition-colors hover:text-gold"
+          >
+            {content.nav.score}
+          </Link>
+          <Link
+            to="/lead-calculator"
+            data-testid="footer-calculator-link"
+            className="font-medium no-underline transition-colors hover:text-gold"
+          >
+            {content.nav.calculator}
+          </Link>
           <a
             href={content.links.instagram}
             target="_blank"

@@ -45,6 +45,12 @@ yarn start
 - The form posts to Netlify Forms (`data-netlify="true"`, hidden `form-name` field).
 - In-page links preset the Topic field via a URL parameter, e.g. `/?topic=selling#contact`. Valid values: `tax`, `real-estate`, `hiring`, `selling`, `funding`, `business`, `other`.
 
+### Lead tools
+
+- `/lead-leak-score` — 8-question quiz (answers score 0–3, total shown out of 100) with a "top 3 leaks" result and an optional email-results capture (Netlify form `lead-leak-score`).
+- `/lead-calculator` — lost-lead revenue calculator (leads − clients, win-back toggle 10/20/30%).
+- Both are linked in the header, footer, and a band on the homepage after Marketing services. All questions, tips and labels are editable in `src/content.js`.
+
 ## Accessibility & performance
 
 - WCAG AA contrast: plum text on gold buttons, plum on cream, cream on plum.

@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Privacy from "@/pages/Privacy";
+import LeadLeakScore from "@/pages/LeadLeakScore";
+import LeadCalculator from "@/pages/LeadCalculator";
 
 function useSmoothScroll() {
   useEffect(() => {
@@ -60,6 +62,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/lead-leak-score" element={<LeadLeakScore />} />
+            <Route path="/lead-calculator" element={<LeadCalculator />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </div>

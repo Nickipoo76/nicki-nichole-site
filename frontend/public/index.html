@@ -64,6 +64,11 @@
             <select name="topic"></select>
             <textarea name="message"></textarea>
         </form>
+        <form name="lead-leak-score" data-netlify="true" netlify-honeypot="bot-field" hidden>
+            <input type="email" name="email" />
+            <input type="text" name="score" />
+            <input type="text" name="leaks" />
+        </form>
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
     </head>
