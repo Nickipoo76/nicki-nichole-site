@@ -11,7 +11,7 @@ const content = {
     name: "Nicki Nichole",
     legalName: "Nichole Paul",
     url: "https://nickinichole.com",
-    metaTitle: "Nicki Nichole | Lead Generation for Tax & Real Estate Pros | Seattle",
+    metaTitle: "Nicki Nichole | Lead Generation for Tax & Real Estate Pros",
     metaDescription:
       "Over a decade generating leads in tax and real estate. Nicki Nichole helps pros attract more leads, convert them faster and keep clients coming back.",
     ogImage: "/images/og-image.jpg",
@@ -178,7 +178,7 @@ const content = {
       width: 355,
       height: 427,
     },
-    badges: ["Lead Generation", "Real Estate", "Tax", "Seattle, WA"],
+    badges: ["Lead Generation", "Real Estate", "Tax", "Business Building"],
   },
 
   // ---- Proof strip --------------------------------------------------------
@@ -308,7 +308,7 @@ const content = {
         title: "We handle taxes.",
         text: "Personal and business tax preparation, with same-day cash advances available.",
         linkText: "Get my taxes done",
-        external: "accelerate", // opens links.accelerate in a new tab
+        topic: "taxes", // opens the contact form with "Getting my taxes done" selected
       },
       {
         title: "We build businesses.",
@@ -360,7 +360,7 @@ const content = {
       "Each tax season I take one seasonal role with a major tax and accounting firm, working on the ground with local businesses. I choose it on purpose. It keeps me close to the people I help grow all year, and my business keeps running the whole time.",
     ],
     closer: "What I bring: the wisdom of someone who's seen what works, and the energy to go after what's next.",
-    credentials: "B.S. in Marketing, Western Governors University",
+    credentials: "", // leave empty to hide
     cta: "Let's work together",
   },
 
@@ -369,7 +369,7 @@ const content = {
     eyebrow: "Contact",
     heading: "Let's find your leaks, and plug them.",
     intro: "Tell me about your business and what you want more of. I read every message myself.",
-    location: "Seattle, WA",
+    location: "", // leave empty to hide
     topics: [
       { value: "tax", label: "Tax business" },
       { value: "real-estate", label: "Real estate" },
@@ -377,6 +377,7 @@ const content = {
       { value: "selling", label: "Selling a property" },
       { value: "funding", label: "Funding a deal" },
       { value: "business", label: "Starting a business" },
+      { value: "taxes", label: "Getting my taxes done" },
       { value: "other", label: "Other" },
     ],
     successHeading: "Message sent.",

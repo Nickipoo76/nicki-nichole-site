@@ -31,7 +31,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
           >
-            {content.site.name} · {h.badges[3]}
+            {content.site.name}
           </motion.p>
 
           <h1
@@ -123,12 +123,6 @@ export default function Hero() {
                 eager
                 testId="hero-headshot"
               />
-            </div>
-            <div
-              aria-hidden="true"
-              className="absolute -bottom-4 -right-4 rounded-full bg-plum px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold shadow-lg"
-            >
-              Est. Seattle
             </div>
           </motion.div>
         </motion.div>

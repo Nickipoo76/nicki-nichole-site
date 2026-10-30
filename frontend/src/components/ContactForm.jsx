@@ -107,10 +107,12 @@ export default function ContactForm() {
                 </a>
               </li>
             )}
-            <li className="inline-flex items-center gap-3 font-semibold">
-              <MapPin size={20} aria-hidden="true" className="text-gold" />
-              {c.location}
-            </li>
+            {c.location && (
+              <li className="inline-flex items-center gap-3 font-semibold">
+                <MapPin size={20} aria-hidden="true" className="text-gold" />
+                {c.location}
+              </li>
+            )}
           </ul>
         </Reveal>
 

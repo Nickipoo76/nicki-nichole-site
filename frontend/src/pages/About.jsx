@@ -37,6 +37,7 @@ export default function About() {
             </div>
           </motion.div>
 
+          {a.credentials && (
           <Reveal delay={0.2} className="mx-auto mt-10 max-w-[320px] sm:max-w-[360px]">
             <p
               data-testid="about-credentials"
@@ -46,6 +47,7 @@ export default function About() {
               {a.credentials}
             </p>
           </Reveal>
+          )}
         </div>
 
         <div className="order-1 lg:order-2">

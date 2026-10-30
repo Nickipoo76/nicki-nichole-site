@@ -46,15 +46,6 @@ export default function Footer() {
               <Linkedin size={16} aria-hidden="true" /> LinkedIn
             </a>
           )}
-          <a
-            href={content.links.accelerate}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="footer-accelerate-link"
-            className="font-medium no-underline transition-colors hover:text-gold"
-          >
-            {f.accelerateLabel}
-          </a>
           <Link
             to="/privacy"
             data-testid="footer-privacy-link"
