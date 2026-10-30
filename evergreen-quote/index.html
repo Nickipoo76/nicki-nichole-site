@@ -180,7 +180,8 @@
       <h2>Questions</h2>
       <details><summary>What do you clean?</summary><p>Apartments and condo units: move-in/move-out, deep cleaning and bi-weekly upkeep. We don't take large homes or commercial spaces.</p></details>
       <details><summary>Does the apartment need to be empty for a move-out clean?</summary><p>Yes. Move-in/move-out cleaning is for vacant units, and utilities need to be on at the time of service.</p></details>
-      <details><summary>Is the price on this page final?</summary><p>It's an estimate. Your final price is confirmed after a quick walkthrough or photos.</p></details>
+      <details><summary>Is the price on this page final?</summary><p>It's an estimate. Your final price is confirmed after a quick walkthrough or photos. Extra time for heavy buildup is $75 an hour.</p></details>
+      <details><summary>How does bi-weekly cleaning work?</summary><p>It's a contract with a 3-month minimum, every two weeks. We start with a one-time deep clean. Spots are limited, so we confirm bi-weekly requests before booking.</p></details>
     </div>
   </section>
 
@@ -216,7 +217,7 @@
       $("addon-opts").innerHTML = list.map((a) => {
         const inc = a.includedIn.includes(state.service);
         return `<div class="opt"><input type="checkbox" id="ad-${a.id}" value="${a.id}" ${inc ? "checked disabled" : state.addons.has(a.id) ? "checked" : ""} />
-        <label for="ad-${a.id}">${a.name}<small>${inc ? '<span class="inc">Included</span>' : "+" + usd(a.price)}</small></label></div>`;
+        <label for="ad-${a.id}">${a.name}<small>${inc ? '<span class="inc">Included</span>' : (a.startingAt ? "From +" : "+") + usd(a.price)}</small></label></div>`;
       }).join("");
       $("addon-opts").querySelectorAll("input:not([disabled])").forEach((i) => i.addEventListener("change", () => {
         i.checked ? state.addons.add(i.value) : state.addons.delete(i.value); render(false);
@@ -233,12 +234,12 @@
       const extra = Math.max(0, state.baths - unit.includedBaths), full = Math.floor(extra), half = extra - full > 0 ? 1 : 0;
       if (full) lines.push([`${full} extra bathroom${full > 1 ? "s" : ""}`, S.extraBathroom == null ? null : full * S.extraBathroom]);
       if (half) lines.push(["Half bathroom", S.halfBathroom]);
-      S.addOns.forEach((a) => { if (state.addons.has(a.id) && priced(a) && !a.includedIn.includes(svc.id)) lines.push([a.name, a.price]); });
+      S.addOns.forEach((a) => { if (state.addons.has(a.id) && priced(a) && !a.includedIn.includes(svc.id)) lines.push([a.name + (a.startingAt ? " (from)" : ""), a.price, a.startingAt]); });
       let range;
       if (base == null) range = "Custom quote";
       else {
         const total = lines.reduce((t, l) => t + (l[1] || 0), 0);
-        const open = lines.some((l) => l[1] == null);
+        const open = lines.some((l) => l[1] == null || l[2]);
         range = S.RANGE ? `${usd(total * (1 - S.RANGE))}–${usd(total * (1 + S.RANGE))}` : usd(total);
         if (open) range = "From " + range;
       }
