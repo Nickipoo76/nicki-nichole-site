@@ -11,9 +11,9 @@ const content = {
     name: "Nicki Nichole",
     legalName: "Nichole Paul",
     url: "https://nickinichole.com",
-    metaTitle: "Nicki Nichole | Lead Generation for Tax & Real Estate Pros",
+    metaTitle: "Nicki Nichole | Lead Generation for Trust-Based Businesses",
     metaDescription:
-      "Over a decade generating leads in tax and real estate. Nicki Nichole helps pros attract more leads, convert them faster and keep clients coming back.",
+      "Over a decade generating leads for trust-based businesses. Nicki Nichole helps tax pros, real estate agents and entrepreneurs attract more leads, convert them faster and keep clients coming back.",
     ogImage: "/images/og-image.jpg",
   },
 
@@ -50,7 +50,7 @@ const content = {
       [{ text: "Clients on", accent: false }, { text: "repeat.", accent: false }],
     ],
     subhead:
-      "Over a decade generating leads in tax and real estate. I build the systems that bring new clients in, turn more of them into paying clients, and keep them coming back.",
+      "Over a decade generating leads for trust-based businesses. I bring new clients in, turn more of them into paying clients, and keep them coming back.",
     primaryCta: "Book my free Lead Leak Scan",
     secondaryCta: "Hiring? See what I bring to your team",
     headshot: {
@@ -64,10 +64,16 @@ const content = {
 
   // ---- Proof strip --------------------------------------------------------
   proofStrip: [
-    "Over a decade generating leads in real estate + tax",
+    "Over a decade generating leads for trust-based businesses",
     "Millions in real estate sold",
-    "Rookie of the Year + top sales awards",
+    "$8M+ in real estate assets secured",
+    "Rookie of the Year",
+    "Million Dollar Club",
+    "Community Manager of the Month + Quarter",
+    "Owner of an IRS-authorized e-file tax firm",
+    "Sold-out entrepreneur events",
     "11% conversion vs. a 3% team average",
+    "Startup board member",
   ],
 
   // ---- Who I help ----------------------------------------------------------
@@ -75,13 +81,46 @@ const content = {
     eyebrow: "Who I help",
     heading: "Stop waiting for the phone to ring. Let's build a pipeline.",
     intro:
-      "Tax professionals and real estate agents who are ready for a steady, predictable flow of new clients, not a calendar that depends on luck.",
-    subheading: "The problems I solve",
-    problems: [
-      "Your calendar depends on who happens to call.",
-      "People find you online, then pick someone else.",
-      "Leads come in, and follow-up falls through the cracks.",
-      "You're posting or paying for ads, and none of it turns into clients.",
+      "Tax pros, real estate agents and other trust-based businesses that are ready for a steady, predictable flow of new clients, not a calendar that depends on luck.",
+    problemsHeading: "The problems I solve",
+    problemsSubhead:
+      "If it's standing between you and more clients, more income or a business that runs, I've fixed it before.",
+    groups: [
+      {
+        name: "Get more clients",
+        items: [
+          "People find you online, then pick someone else.",
+          "Your calendar depends on who happens to call.",
+          "Leads come in, and follow-up falls through the cracks.",
+          "You're posting or paying for ads, and none of it turns into clients.",
+          "Past clients forget you between seasons.",
+          "Your events don't fill the room.",
+        ],
+      },
+      {
+        name: "Real estate",
+        items: [
+          "You're behind on payments and facing foreclosure.",
+          "You inherited a house you don't want, and probate feels overwhelming.",
+          "You're divorcing and need a fair resolution on the house, without a court fight.",
+          "You need to sell a property as-is, in any condition.",
+          "You want your first rental property but don't know where to start.",
+          "You found a deal and need the funding to close it.",
+        ],
+      },
+      {
+        name: "Build the business",
+        items: [
+          "You have an idea but no LLC, operating agreement or plan.",
+          "Your business runs on your memory instead of systems.",
+          "You need to hire and train a team you can trust.",
+          "You want to start your own tax business.",
+          "You want to become a notary or loan signing agent.",
+          "You're a trucker ready for your own authority.",
+          "You want to start wholesaling real estate.",
+          "You want more than one stream of income.",
+        ],
+      },
     ],
   },
 
@@ -122,7 +161,7 @@ const content = {
   faster: {
     eyebrow: "Why it's faster with me",
     heading: "You won't have to teach me your business.",
-    text: "Most marketers spend your first month learning your industry. I've sold new homes, wholesaled real estate, worked tax season on the ground, and built and hired teams for tax offices. We skip the learning curve, start with what's already working, and fix what isn't.",
+    text: "Most marketers spend your first month learning your industry. I've sold new homes, wholesaled real estate, run my own tax firm, sold out entrepreneur events and built teams from scratch. We skip the learning curve, start with what's already working, and fix what isn't.",
   },
 
   // ---- Proof / results -------------------------------------------------------
@@ -163,7 +202,7 @@ const content = {
         description: "growth in online following for a tax and credit firm",
       },
     ],
-    awards: "Rookie of the Year · Top monthly and quarterly sales awards",
+    awards: "Rookie of the Year · Million Dollar Club · Community Manager of the Month + Quarter",
     testimonialsNote: "[ADD TESTIMONIALS ONCE APPROVED]", // stays hidden while it's a placeholder
   },
 
@@ -197,6 +236,12 @@ const content = {
         linkText: "Start my business",
         topic: "business",
       },
+      {
+        title: "We teach it.",
+        text: "Start wholesaling, launch your own tax business, become a notary or loan signing agent, or get your own trucking authority, with someone who's done it walking you through.",
+        linkText: "Teach me",
+        topic: "learn",
+      },
     ],
     note: "Wholesaling real estate is lead generation with a deadline. You find motivated sellers first, say the right thing, and follow up until it closes. That's the same targeting and follow-up I build for my clients.",
   },
@@ -213,7 +258,7 @@ const content = {
     hiring: {
       heading: "For hiring teams",
       // {roles} is replaced with the roles string below
-      text: "Over a decade of hands-on lead generation, sales, conversion and team building in tax and real estate, plus the drive of someone who runs her own businesses. Open to {roles}.",
+      text: "Over a decade of hands-on lead generation, sales, conversion and team building for trust-based businesses, plus the drive of someone who runs her own businesses. Open to {roles}.",
       roles: "marketing consultant roles",
       cta: "Let's talk",
       topic: "hiring",
@@ -236,12 +281,17 @@ const content = {
   about: {
     heading: "Hi, I'm Nichole. Most people call me Nicki.",
     paragraphs: [
-      "I started in new-home sales with one of the largest homebuilders in the Southeast. I sold millions in homes there, earned Rookie of the Year, and kept stacking top monthly and quarterly sales awards. Then I took everything I'd learned and built my own businesses.",
-      "Since then I've wholesaled millions more in real estate, helped secure more than $8M in real estate assets, run lead generation for a tax and credit firm, and built and hired teams for tax offices. I've mentored new investors, funded deals and helped people start businesses from scratch. Every one of those businesses grew the same way: with a steady flow of new leads and relentless follow-up.",
+      "I got my start in new-home sales in Atlanta, specializing in new construction for several builders. I earned Rookie of the Year, joined the Million Dollar Club, and was named Community Manager of the Month and of the Quarter more than once. Selling homes taught me what every trust-based business runs on: people buy from who they find, trust and hear from first.",
+      "Then I built businesses of my own. I own an IRS-authorized e-file tax firm. I've wholesaled millions in real estate and helped secure more than $8M in real estate assets. I've helped homeowners avoid foreclosure, guided heirs through probate to sell houses they didn't want, helped divorcing couples reach fair resolutions on their homes without mediation or court, and helped investors buy their first rental property.",
+      "I love teaching what I know. I've shown people how to start wholesaling, launch their own tax business, become a notary and loan signing agent, and get their own trucking authority. I've formed LLCs for new owners, complete with SOPs, operating agreements, business plans and marketing plans. I've hosted sold-out entrepreneur events, given new business owners discounted vendor spots, booked the speakers and marketed every one. And I've served on the board of a startup and of a book club.",
       "Each tax season I take one seasonal role with a major tax and accounting firm, working on the ground with local businesses. I choose it on purpose. It keeps me close to the people I help grow all year, and my business keeps running the whole time.",
+      "What drives me is watching a business owner take an idea and turn it into something real. I'm a big believer in multiple streams of income, and I love showing people how to build them. Outside of work, you'll find me planning the next trip, celebrating someone's big win, or hosting the kind of event people talk about for weeks. I work hard, and I believe in living well.",
     ],
     closer: "What I bring: the wisdom of someone who's seen what works, and the energy to go after what's next.",
-    credentials: "", // leave empty to hide
+    awardsLabel: "Awards & recognition",
+    awards: ["Rookie of the Year", "Million Dollar Club", "Community Manager of the Month", "Community Manager of the Quarter"],
+    rolesLabel: "Roles",
+    roles: ["Owner, IRS-authorized e-file tax firm", "Startup board member", "Book club board member", "Event host & promoter"],
     cta: "Let's work together",
   },
 
@@ -259,6 +309,7 @@ const content = {
       { value: "funding", label: "Funding a deal" },
       { value: "business", label: "Starting a business" },
       { value: "taxes", label: "Getting my taxes done" },
+      { value: "learn", label: "Learning a new income stream" },
       { value: "other", label: "Other" },
     ],
     successHeading: "Message sent.",

@@ -11,7 +11,7 @@ export default function WhyFaster() {
   const x = useTransform(scrollYProgress, [0, 1], reduce ? ["0%", "0%"] : ["6%", "-6%"]);
 
   return (
-    <section ref={ref} data-testid="why-faster-section" className="relative overflow-hidden py-24 sm:py-32">
+    <section ref={ref} data-testid="why-faster-section" className="relative overflow-hidden py-12 sm:py-20">
       <motion.p
         aria-hidden="true"
         style={{ x }}
@@ -25,7 +25,7 @@ export default function WhyFaster() {
           <h2 className="font-display max-w-3xl text-balance text-3xl font-semibold leading-tight text-plum sm:text-5xl">
             {c.heading}
           </h2>
-          <p className="mt-8 max-w-2xl border-l-4 border-gold pl-6 text-base leading-relaxed text-plum/85 sm:text-lg">
+          <p className="mt-8 max-w-2xl border-l-4 border-gold pl-6 text-base leading-relaxed text-body sm:text-lg">
             {c.text}
           </p>
         </Reveal>

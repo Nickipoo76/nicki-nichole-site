@@ -6,7 +6,7 @@ import { Reveal, stagger, staggerItem } from "../motion";
 export default function Services() {
   const c = content.services;
   return (
-    <section data-testid="services-section" className="bg-blush py-24 sm:py-32">
+    <section data-testid="services-section" className="bg-blush py-12 sm:py-20">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <Reveal className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -33,7 +33,7 @@ export default function Services() {
               key={item.title}
               variants={staggerItem}
               data-testid={`service-card-${i}`}
-              className={`group relative overflow-hidden rounded-3xl bg-plum p-8 text-cream transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_54px_-18px_rgba(42,18,41,0.6)] ${
+              className={`group relative overflow-hidden rounded-3xl bg-plum p-8 text-cream transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_54px_-18px_rgba(7,18,42,0.6)] ${
                 i === 0 ? "md:col-span-2 lg:col-span-3" : "lg:col-span-3"
               }`}
             >

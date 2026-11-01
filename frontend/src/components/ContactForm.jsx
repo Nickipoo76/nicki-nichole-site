@@ -47,14 +47,14 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" data-testid="contact-section" className="bg-cream-deep py-24 sm:py-32">
+    <section id="contact" data-testid="contact-section" className="bg-cream-deep py-12 sm:py-20">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 sm:px-8 lg:grid-cols-[1fr_1.1fr]">
         <Reveal>
           <p className="eyebrow mb-6 text-plum/60">{c.eyebrow}</p>
           <h2 className="font-display max-w-md text-balance text-3xl font-semibold leading-tight text-plum sm:text-5xl">
             {c.heading}
           </h2>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-plum/80 sm:text-lg">{c.intro}</p>
+          <p className="mt-6 max-w-md text-base leading-relaxed text-body sm:text-lg">{c.intro}</p>
 
           <ul className="mt-10 space-y-4 text-base text-plum">
             {!isPlaceholder(content.links.email) && (
@@ -113,7 +113,7 @@ export default function ContactForm() {
               className="card-surface flex h-full flex-col items-start justify-center p-10"
             >
               <h3 className="font-display text-3xl font-semibold text-plum">{c.successHeading}</h3>
-              <p className="mt-4 text-base leading-relaxed text-plum/80">{c.successText}</p>
+              <p className="mt-4 text-base leading-relaxed text-body">{c.successText}</p>
               <button
                 type="button"
                 data-testid="contact-success-back"

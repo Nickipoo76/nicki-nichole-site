@@ -5,11 +5,11 @@ import SmartImage from "./SmartImage";
 export default function Monroe() {
   const c = content.monroe;
   return (
-    <section data-testid="monroe-section" className="overflow-hidden py-24 sm:py-32">
+    <section data-testid="monroe-section" className="overflow-hidden py-12 sm:py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal className="relative mx-auto w-full max-w-[340px]">
           <div aria-hidden="true" className="absolute -inset-5 rotate-3 rounded-[2.5rem] bg-plum" />
-          <div className="relative overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-24px_rgba(59,31,58,0.45)]">
+          <div className="relative overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-24px_rgba(11,26,52,0.45)]">
             <SmartImage
               src={c.image.src}
               alt={c.image.alt}
@@ -30,7 +30,7 @@ export default function Monroe() {
           <h2 className="font-display max-w-xl text-balance text-3xl font-semibold leading-tight text-plum sm:text-5xl">
             {c.heading}
           </h2>
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-plum/85 sm:text-lg">{c.text}</p>
+          <p className="mt-8 max-w-xl text-base leading-relaxed text-body sm:text-lg">{c.text}</p>
         </Reveal>
       </div>
     </section>

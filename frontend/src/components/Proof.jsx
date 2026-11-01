@@ -6,7 +6,7 @@ import { Reveal, stagger, staggerItem } from "../motion";
 export default function Proof() {
   const c = content.proof;
   return (
-    <section data-testid="proof-section" className="bg-plum py-24 text-cream sm:py-32">
+    <section data-testid="proof-section" className="bg-plum py-12 text-cream sm:py-20">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <Reveal>
           <p className="eyebrow mb-6 text-cream/60">{c.eyebrow}</p>

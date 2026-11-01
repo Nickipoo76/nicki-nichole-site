@@ -15,14 +15,14 @@ export default function Hero() {
   const haloY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -50]);
 
   return (
-    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden pt-28 sm:pt-32">
+    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden pt-24 sm:pt-28">
       {/* ambient halos */}
       <motion.div aria-hidden="true" style={{ y: haloY }} className="pointer-events-none absolute inset-0">
         <div className="absolute -top-32 right-[-10%] h-[34rem] w-[34rem] rounded-full bg-blush blur-3xl opacity-70" />
         <div className="absolute bottom-[-20%] left-[-12%] h-[28rem] w-[28rem] rounded-full bg-gold/20 blur-3xl" />
       </motion.div>
 
-      <div className="relative mx-auto grid max-w-6xl gap-14 px-6 pb-16 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-10 lg:pb-24">
+      <div className="relative mx-auto grid max-w-6xl gap-14 px-6 pb-16 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-10 lg:pb-16">
         <div>
           <motion.p
             data-testid="hero-eyebrow"
@@ -51,7 +51,7 @@ export default function Hero() {
 
           <motion.p
             data-testid="hero-subhead"
-            className="mt-8 max-w-xl text-base leading-relaxed text-plum/80 sm:text-lg"
+            className="mt-8 max-w-xl text-base leading-relaxed text-body sm:text-lg"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
@@ -113,7 +113,7 @@ export default function Hero() {
           >
             <div aria-hidden="true" className="absolute -inset-5 -rotate-3 rounded-[2.5rem] bg-blush" />
             <div aria-hidden="true" className="absolute -inset-5 rotate-2 rounded-[2.5rem] border-2 border-gold/50" />
-            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-24px_rgba(59,31,58,0.4)]">
+            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_28px_60px_-24px_rgba(11,26,52,0.4)]">
               <SmartImage
                 src={h.headshot.src}
                 alt={h.headshot.alt}
