@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Instant Cleaning Quote | Seattle Evergreen Clean</title>
-  <meta name="description" content="Get an instant price range for move-in/move-out, deep or bi-weekly apartment cleaning in Seattle." />
+  <meta name="description" content="Get an instant price range for move-in/move-out, deep or bi-weekly cleaning for Seattle homes and apartments." />
   <link rel="canonical" href="https://seattleevergreenclean.netlify.app/quote" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Seattle Evergreen Clean" />
@@ -46,7 +46,7 @@
     legend { font-family:"Playfair Display",Georgia,serif; font-size:1.25rem; font-weight:700; margin-bottom:10px; padding:0; }
     .opts { display:grid; gap:10px; }
     .opts.two { grid-template-columns:repeat(2,1fr); }
-    @media (min-width:600px) { .opts.four { grid-template-columns:repeat(4,1fr); } }
+    @media (min-width:600px) { .opts.four { grid-template-columns:repeat(4,1fr); } .opts.five { grid-template-columns:repeat(5,1fr); } }
     .opt { position:relative; }
     .opt input { position:absolute; opacity:0; inset:0; }
     .opt label { display:block; height:100%; border:2px solid var(--line); border-radius:14px; padding:12px 14px; cursor:pointer; font-weight:600; background:var(--white); }
@@ -108,9 +108,9 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Apartment cleaning specialists · Seattle</span>
+      <span class="eyebrow">Home &amp; apartment cleaning · Seattle</span>
       <h1>Get your cleaning price in 60 seconds</h1>
-      <p>Move-in, move-out, deep and bi-weekly cleaning for Seattle apartments and condos. Pick your options and see your price instantly.</p>
+      <p>Move-in, move-out, deep and bi-weekly cleaning for Seattle homes, apartments and condos. Pick your options and see your price instantly.</p>
     </div>
   </section>
 
@@ -119,7 +119,7 @@
     <div class="grid">
       <form id="calc" aria-label="Quote calculator" onsubmit="return false">
         <fieldset><legend>1. Type of cleaning</legend><div class="opts" id="service-opts"></div></fieldset>
-        <fieldset><legend>2. Apartment size</legend><div class="opts two four" id="unit-opts"></div></fieldset>
+        <fieldset><legend>2. Home size</legend><div class="opts two five" id="unit-opts"></div></fieldset>
         <fieldset>
           <legend>3. Bathrooms</legend>
           <div class="stepper">
@@ -148,7 +148,7 @@
     <div class="wrap">
       <h2>How it works</h2>
       <div class="steps">
-        <div class="step"><b>1</b><h3 style="font-size:1.15rem">Build your quote</h3><p style="margin:6px 0 0;color:var(--muted)">Choose the cleaning, your apartment size and any add-ons.</p></div>
+        <div class="step"><b>1</b><h3 style="font-size:1.15rem">Build your quote</h3><p style="margin:6px 0 0;color:var(--muted)">Choose the cleaning, your home size and any add-ons.</p></div>
         <div class="step"><b>2</b><h3 style="font-size:1.15rem">Send your request</h3><p style="margin:6px 0 0;color:var(--muted)">Tell us your date and time. Weekend appointments are limited.</p></div>
         <div class="step"><b>3</b><h3 style="font-size:1.15rem">We confirm</h3><p style="margin:6px 0 0;color:var(--muted)">We confirm your final price and lock in your appointment.</p></div>
       </div>
@@ -189,8 +189,8 @@
   <section class="faq">
     <div class="wrap" style="max-width:760px">
       <h2>Questions</h2>
-      <details><summary>What do you clean?</summary><p>Apartments and condo units: move-in/move-out, deep cleaning and bi-weekly upkeep. We don't take large homes or commercial spaces.</p></details>
-      <details><summary>Does the apartment need to be empty for a move-out clean?</summary><p>Yes. Move-in/move-out cleaning is for vacant units, and utilities need to be on at the time of service.</p></details>
+      <details><summary>What do you clean?</summary><p>Houses, townhomes, apartments and condos: move-in/move-out, deep cleaning and bi-weekly upkeep. Homes with 4 or more bedrooms get a custom quote. We don't take commercial spaces.</p></details>
+      <details><summary>Does the home need to be empty for a move-out clean?</summary><p>Yes. Move-in/move-out cleaning is for vacant homes, and utilities need to be on at the time of service.</p></details>
       <details><summary>Is the price on this page final?</summary><p>It's an estimate. Your final price is confirmed after a quick walkthrough or photos. Extra time for heavy buildup is $75 an hour.</p></details>
       <details><summary>How does bi-weekly cleaning work?</summary><p>It's a contract with a 3-month minimum, every two weeks. We start with a one-time deep clean. Spots are limited, so we confirm bi-weekly requests before booking.</p></details>
     </div>

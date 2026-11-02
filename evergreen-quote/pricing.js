@@ -22,22 +22,22 @@ window.QUOTE_SETTINGS = {
     {
       id: "moveout",
       name: "Move-In / Move-Out Cleaning",
-      note: "Empty units only. Vacant apartment, utilities on.",
+      note: "Empty homes only. Vacant, utilities on.",
       prices: { studio: 275, "1br": 325, "2br": 425, "3br": 525 },
       hours: { studio: "4 hr", "1br": "5 hr", "2br": "6.5 hr", "3br": "8 hr" },
       recurring: false
     },
     {
       id: "deep",
-      name: "Deep Apartment Cleaning",
-      note: "Top-to-bottom reset for occupied apartments.",
+      name: "Deep Cleaning",
+      note: "Top-to-bottom reset for lived-in homes and apartments.",
       prices: { studio: 225, "1br": 275, "2br": 350, "3br": 450 }, // 3BR set by Nicki Oct 30
       hours: { studio: "3.5 hr", "1br": "4.5 hr", "2br": "5 hr", "3br": "6 hr" },
       recurring: false
     },
     {
       id: "biweekly",
-      name: "Bi-Weekly Apartment Cleaning",
+      name: "Bi-Weekly Cleaning",
       note: "Contract: 3-month minimum, starts with a deep clean.",
       prices: { studio: 135, "1br": 165, "2br": 210, "3br": null }, // 3BR not on the price sheet
       hours: { studio: "2 hr", "1br": "2.5 hr", "2br": "3.5 hr", "3br": null },
@@ -50,7 +50,8 @@ window.QUOTE_SETTINGS = {
     { id: "studio", name: "Studio", includedBaths: 1 },
     { id: "1br", name: "1 bedroom", includedBaths: 1 },
     { id: "2br", name: "2 bedrooms", includedBaths: 2 },
-    { id: "3br", name: "3 bedrooms", includedBaths: 2 }
+    { id: "3br", name: "3 bedrooms", includedBaths: 2 },
+    { id: "4br", name: "4+ bedrooms", includedBaths: 3 } // no prices yet = "Custom quote"
   ],
 
   // Bathrooms beyond what's included. null = confirmed at walkthrough
