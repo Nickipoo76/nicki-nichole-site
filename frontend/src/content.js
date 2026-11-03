@@ -280,19 +280,34 @@ const content = {
   // ---- About page -------------------------------------------------------------------
   about: {
     heading: "Hi, I'm Nichole. Most people call me Nicki.",
-    paragraphs: [
-      "I got my start in new-home sales in Atlanta, specializing in new construction for several builders. I earned Rookie of the Year, joined the Million Dollar Club, and was named Community Manager of the Month and of the Quarter more than once. Selling homes taught me what every trust-based business runs on: people buy from who they find, trust and hear from first.",
-      "Then I built businesses of my own. I own an IRS-authorized e-file tax firm. I've wholesaled millions in real estate and helped secure more than $8M in real estate assets. I've helped homeowners avoid foreclosure, guided heirs through probate to sell houses they didn't want, helped divorcing couples reach fair resolutions on their homes without mediation or court, and helped investors buy their first rental property.",
-      "I love teaching what I know. I've shown people how to start wholesaling, launch their own tax business, become a notary and loan signing agent, and get their own trucking authority. I've formed LLCs for new owners, complete with SOPs, operating agreements, business plans and marketing plans. I've hosted sold-out entrepreneur events, given new business owners discounted vendor spots, booked the speakers and marketed every one. And I've served on the board of a startup and of a book club.",
-      "Each tax season I take one seasonal role with a major tax and accounting firm, working on the ground with local businesses. I choose it on purpose. It keeps me close to the people I help grow all year, and my business keeps running the whole time.",
-      "What drives me is watching a business owner take an idea and turn it into something real. I'm a big believer in multiple streams of income, and I love showing people how to build them. Outside of work, you'll find me planning the next trip, celebrating someone's big win, or hosting the kind of event people talk about for weeks. I work hard, and I believe in living well.",
+    summary: "I'm a business owner and operations leader with experience in real estate, tax services, sales, and entrepreneurship.",
+    glanceLabel: "At a glance",
+    glance: [
+      { value: "20+ years", label: "in tax preparation" },
+      { value: "1,000+", label: "tax returns prepared" },
+      { value: "$8M+", label: "in real estate assets secured" },
+      { value: "Millions", label: "in real estate wholesaled" },
     ],
-    closer: "What I bring: the wisdom of someone who's seen what works, and the energy to go after what's next.",
-    awardsLabel: "Awards & recognition",
-    awards: ["Rookie of the Year", "Million Dollar Club", "Community Manager of the Month", "Community Manager of the Quarter"],
-    rolesLabel: "Roles",
-    roles: ["Owner, IRS-authorized e-file tax firm", "Startup board member", "Book club board member", "Event host & promoter"],
-    cta: "Let's work together",
+    paragraphs: [
+      "I started my career in new-home sales in Atlanta, working with several homebuilders. I earned Rookie of the Year, joined the Million Dollar Club, and was named Community Manager of the Month and Community Manager of the Quarter several times over the years. That experience taught me how much trust, listening, and follow-through matter when people are making major decisions.",
+      "From there, I built a career in real estate investing. I've wholesaled millions of dollars in real estate and helped secure more than $8 million in real estate assets. Along the way, I've helped homeowners avoid foreclosure, guided heirs through probate sales, helped divorcing couples find fair resolutions for shared homes, and helped investors purchase their first rental properties.",
+      "I've also shared what I've learned with aspiring entrepreneurs, teaching topics such as wholesaling, Airbnb arbitrage, notary and loan-signing work, and getting a trucking authority. When I hosted entrepreneur events, I offered new business owners discounted vendor spots to make it easier for them to get in front of an audience and start building connections. I've booked speakers, promoted events, helped form LLCs, and developed business plans, operating agreements, marketing plans, and standard operating procedures. I've also served on the boards of a startup and a book club.",
+      "Tax preparation has been a major part of my career for more than 20 years. Through my own IRS-authorized e-file firm, I've prepared more than 1,000 returns, helped clients receive millions of dollars in refunds, and helped many save thousands of dollars. I've also helped clients stop wage garnishments and helped open additional tax offices. My firm continues to serve clients with a team I built and oversee. During tax season, I take on a seasonal management role with Intuit, where I manage a local office and organize marketing events.",
+      "I'm proud of the many paths I've taken and the people I've been able to help along the way. Outside of work, I enjoy planning trips, celebrating the people I care about, and hosting memorable gatherings. I believe in working hard, enjoying life, and being proud of what you build.",
+    ],
+    timelineLabel: "Career path",
+    timeline: [
+      { title: "New-home sales", detail: "Worked with several homebuilders in Atlanta." },
+      { title: "Real estate wholesaling", detail: "Wholesaled millions of dollars in real estate." },
+      { title: "Tax firm ownership", detail: "Own an IRS-authorized e-file firm, with a team I built and oversee." },
+      { title: "Entrepreneurship education", detail: "Taught aspiring entrepreneurs and hosted entrepreneur events." },
+      { title: "Seasonal office management", detail: "Manage a local office and organize marketing events during tax season." },
+    ],
+    awardsLabel: "Recognition",
+    awards: ["Rookie of the Year", "Million Dollar Club", "Agent of the Quarter", "Community Manager of the Month", "Community Manager of the Quarter, several times over the years"],
+    skillsLabel: "Leadership & skills",
+    skills: ["Team leadership", "Office operations", "Client service", "Tax preparation", "Marketing events", "Real estate transactions", "Business formation"],
+    cta: "Contact me",
   },
 
   // ---- Contact -----------------------------------------------------------------------

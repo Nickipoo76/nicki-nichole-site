@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Briefcase } from "lucide-react";
+import { ArrowRight, Award, Briefcase, Route } from "lucide-react";
 import { motion } from "framer-motion";
 import content from "../content";
 import { EASE, Reveal } from "../motion";
@@ -68,6 +68,20 @@ export default function About() {
             {a.heading}
           </motion.h1>
 
+          <Reveal delay={0.12}>
+            <p data-testid="about-summary" className="mt-7 max-w-2xl text-xl font-semibold leading-relaxed text-plum sm:text-2xl">
+              {a.summary}
+            </p>
+            <dl data-testid="about-glance" aria-label={a.glanceLabel} className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
+              {a.glance.map((g) => (
+                <div key={g.label} className="flex flex-col rounded-2xl bg-cream-deep p-4 ring-1 ring-plum/10">
+                  <dt className="text-xs font-medium leading-snug text-body">{g.label}</dt>
+                  <dd className="font-display order-first mb-1 text-2xl font-bold text-plum">{g.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+
           {a.paragraphs.map((p, i) => (
             <Reveal key={i} delay={0.15 + i * 0.08}>
               <p className="mt-7 max-w-2xl text-base leading-relaxed text-body sm:text-lg">{p}</p>
@@ -75,15 +89,27 @@ export default function About() {
           ))}
 
           <Reveal delay={0.3}>
+            <div data-testid="about-timeline" className="mt-10 rounded-3xl bg-cream-deep p-6 ring-1 ring-plum/10 sm:p-7">
+              <p className="flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-plum/60">
+                <Route size={16} aria-hidden="true" className="text-gold" />
+                {a.timelineLabel}
+              </p>
+              <ol className="mt-5 space-y-4 border-l-2 border-gold/50 pl-5">
+                {a.timeline.map((t) => (
+                  <li key={t.title} className="relative">
+                    <span aria-hidden="true" className="absolute -left-[27px] top-2 h-2.5 w-2.5 rounded-full bg-gold" />
+                    <p className="font-semibold text-plum">{t.title}</p>
+                    <p className="text-sm leading-relaxed text-body">{t.detail}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
             <Strip label={a.awardsLabel} items={a.awards} icon={Award} testId="about-awards" />
-            <Strip label={a.rolesLabel} items={a.roles} icon={Briefcase} testId="about-roles" />
+            <Strip label={a.skillsLabel} items={a.skills} icon={Briefcase} testId="about-skills" />
           </Reveal>
 
           <Reveal delay={0.4}>
-            <p className="font-display mt-10 max-w-2xl border-l-4 border-gold pl-6 text-xl italic leading-relaxed text-plum sm:text-2xl">
-              {a.closer}
-            </p>
-            <Link to="/#contact" data-testid="about-cta" className="btn-gold mt-10">
+            <Link to="/#contact" data-testid="about-cta" className="mt-8 inline-flex items-center gap-2 font-semibold text-plum underline decoration-gold decoration-2 underline-offset-4">
               {a.cta}
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
