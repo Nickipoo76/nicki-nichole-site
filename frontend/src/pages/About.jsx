@@ -72,7 +72,7 @@ export default function About() {
             <p data-testid="about-summary" className="mt-7 max-w-2xl text-xl font-semibold leading-relaxed text-plum sm:text-2xl">
               {a.summary}
             </p>
-            <dl data-testid="about-glance" aria-label={a.glanceLabel} className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
+            <dl data-testid="about-glance" aria-label={a.glanceLabel} className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3">
               {a.glance.map((g) => (
                 <div key={g.label} className="flex flex-col rounded-2xl bg-cream-deep p-4 ring-1 ring-plum/10">
                   <dt className="text-xs font-medium leading-snug text-body">{g.label}</dt>
