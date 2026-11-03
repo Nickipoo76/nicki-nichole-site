@@ -318,7 +318,7 @@ const content = {
     ],
     awardsLabel: "The receipts",
     awardsNote: "I keep them. Documents and posts going back to 2015.",
-    awards: ["Rookie of the Year", "Million Dollar Club", "Agent of the Quarter", "Community Manager of the Month", "Community Manager of the Quarter, several times over"],
+    awards: ["Rookie of the Year", "Million Dollar Club", "Agent of the Quarter", "Community Manager of the Month", "Community Manager of the Quarter, several times over", "B.S. in Marketing"],
     skillsLabel: "If you're hiring, start here",
     skills: [
       { title: "Building and leading teams", detail: "Built and oversee the team that keeps my tax firm serving clients." },
