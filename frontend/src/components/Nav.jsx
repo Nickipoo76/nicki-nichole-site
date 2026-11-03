@@ -43,7 +43,7 @@ export default function Nav() {
     <header
       data-testid="site-nav"
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
-        scrolled || open ? "bg-cream/90 shadow-[0_1px_0_rgba(11,26,52,0.08)] backdrop-blur-md" : "bg-transparent"
+        scrolled || open || window.location.pathname === "/about" ? "bg-cream/90 shadow-[0_1px_0_rgba(11,26,52,0.08)] backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <nav
