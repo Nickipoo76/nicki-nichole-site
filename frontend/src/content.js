@@ -13,7 +13,7 @@ const content = {
     url: "https://nickinichole.com",
     metaTitle: "Nicki Nichole | Lead Generation for Trust-Based Businesses",
     metaDescription:
-      "Over a decade generating leads for trust-based businesses. Nicki Nichole helps tax pros, real estate agents and entrepreneurs attract more leads, convert them faster and keep clients coming back.",
+      "20+ years generating leads for trust-based businesses. Nicki Nichole helps tax pros, real estate agents and entrepreneurs attract more leads, convert them faster and keep clients coming back.",
     ogImage: "/images/og-image.jpg",
   },
 
@@ -50,7 +50,7 @@ const content = {
       [{ text: "Clients on", accent: false }, { text: "repeat.", accent: false }],
     ],
     subhead:
-      "Over a decade generating leads for trust-based businesses. I bring new clients in, turn more of them into paying clients, and keep them coming back.",
+      "20+ years generating leads for trust-based businesses. I bring new clients in, turn more of them into paying clients, and keep them coming back.",
     primaryCta: "Book my free Lead Leak Scan",
     secondaryCta: "Hiring? See what I bring to your team",
     headshot: {
@@ -64,7 +64,7 @@ const content = {
 
   // ---- Proof strip --------------------------------------------------------
   proofStrip: [
-    "Over a decade generating leads for trust-based businesses",
+    "20+ years generating leads for trust-based businesses",
     "Millions in real estate sold",
     "$8M+ in real estate assets secured",
     "Rookie of the Year",
@@ -258,7 +258,7 @@ const content = {
     hiring: {
       heading: "For hiring teams",
       // {roles} is replaced with the roles string below
-      text: "Over a decade of hands-on lead generation, sales, conversion and team building for trust-based businesses, plus the drive of someone who runs her own businesses. Open to {roles}.",
+      text: "20+ years of hands-on lead generation, sales, conversion and team building for trust-based businesses, plus the drive of someone who runs her own businesses. Open to {roles}.",
       roles: "marketing consultant roles",
       cta: "Let's talk",
       topic: "hiring",
