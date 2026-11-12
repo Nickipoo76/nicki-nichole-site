@@ -281,7 +281,7 @@ const content = {
   about: {
     hookTop: "Entrepreneur \u00d7 Corporate Baddie.",
     hookGold: "On purpose.",
-    subhook: "20+ years in real estate and the tax industry. And I'm still building.",
+    subhook: "20+ years in marketing, real estate and tax. And I'm still building.",
     hello: "Hi, I'm Nichole. Most people call me Nicki.",
     cutout: {
       src: "/images/headshot-cutout.png",

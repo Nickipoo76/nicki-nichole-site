@@ -25,7 +25,7 @@ export default function Proof() {
               key={stat.description}
               variants={staggerItem}
               data-testid={`stat-tile-${i}`}
-              className="group rounded-3xl bg-plum-deep p-8 ring-1 ring-cream/10 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:ring-gold/50"
+              className="group rounded-none border-t-4 border-gold bg-plum-deep p-8 ring-1 ring-cream/10 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:ring-gold/50"
             >
               <dt className="order-2 mt-3 block text-sm leading-relaxed text-cream/75">
                 <span className="font-display block text-5xl font-semibold text-gold sm:text-6xl">

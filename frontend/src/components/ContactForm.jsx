@@ -47,16 +47,16 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" data-testid="contact-section" className="bg-cream-deep py-12 sm:py-20">
+    <section id="contact" data-testid="contact-section" className="bg-cream-deep py-10 sm:py-14">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 sm:px-8 lg:grid-cols-[1fr_1.1fr]">
         <Reveal>
-          <p className="eyebrow mb-6 text-plum/60">{c.eyebrow}</p>
-          <h2 className="font-display max-w-md text-balance text-3xl font-semibold leading-tight text-plum sm:text-5xl">
+          <p className="eyebrow mb-6 text-[#1B3A6B]/60">{c.eyebrow}</p>
+          <h2 className="font-display max-w-md text-balance text-3xl font-semibold leading-tight text-[#1B3A6B] sm:text-5xl">
             {c.heading}
           </h2>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-body sm:text-lg">{c.intro}</p>
+          <p className="mt-6 max-w-md text-base leading-relaxed text-[#3A4A66] sm:text-lg">{c.intro}</p>
 
-          <ul className="mt-10 space-y-4 text-base text-plum">
+          <ul className="mt-10 space-y-4 text-base text-[#1B3A6B]">
             {!isPlaceholder(content.links.email) && (
               <li>
                 <a
@@ -112,12 +112,12 @@ export default function ContactForm() {
               role="status"
               className="card-surface flex h-full flex-col items-start justify-center p-10"
             >
-              <h3 className="font-display text-3xl font-semibold text-plum">{c.successHeading}</h3>
-              <p className="mt-4 text-base leading-relaxed text-body">{c.successText}</p>
+              <h3 className="font-display text-3xl font-semibold text-[#1B3A6B]">{c.successHeading}</h3>
+              <p className="mt-4 text-base leading-relaxed text-[#3A4A66]">{c.successText}</p>
               <button
                 type="button"
                 data-testid="contact-success-back"
-                className="btn-ghost mt-8 text-plum hover:bg-plum hover:text-cream"
+                className="btn-ghost mt-8 text-[#1B3A6B] hover:bg-plum hover:text-cream"
                 onClick={() => setStatus("idle")}
               >
                 {c.successCta}
@@ -141,7 +141,7 @@ export default function ContactForm() {
               </p>
 
               <div>
-                <label htmlFor="contact-name" className="mb-2 block text-sm font-semibold text-plum">
+                <label htmlFor="contact-name" className="mb-2 block text-sm font-semibold text-[#1B3A6B]">
                   Name
                 </label>
                 <input
@@ -151,13 +151,13 @@ export default function ContactForm() {
                   type="text"
                   required
                   autoComplete="name"
-                  className="w-full rounded-2xl border border-plum/20 bg-white px-5 py-3.5 text-base text-plum placeholder:text-plum/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full rounded-sm border border-plum/20 bg-white px-5 py-3.5 text-base text-[#1B3A6B] placeholder:text-[#1B3A6B]/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="contact-email" className="mb-2 block text-sm font-semibold text-plum">
+                <label htmlFor="contact-email" className="mb-2 block text-sm font-semibold text-[#1B3A6B]">
                   Email
                 </label>
                 <input
@@ -167,13 +167,13 @@ export default function ContactForm() {
                   type="email"
                   required
                   autoComplete="email"
-                  className="w-full rounded-2xl border border-plum/20 bg-white px-5 py-3.5 text-base text-plum placeholder:text-plum/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full rounded-sm border border-plum/20 bg-white px-5 py-3.5 text-base text-[#1B3A6B] placeholder:text-[#1B3A6B]/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
                   placeholder="you@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="contact-topic" className="mb-2 block text-sm font-semibold text-plum">
+                <label htmlFor="contact-topic" className="mb-2 block text-sm font-semibold text-[#1B3A6B]">
                   Topic
                 </label>
                 <select
@@ -183,7 +183,7 @@ export default function ContactForm() {
                   required
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
-                  className="w-full appearance-none rounded-2xl border border-plum/20 bg-white px-5 py-3.5 text-base text-plum focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full appearance-none rounded-sm border border-plum/20 bg-white px-5 py-3.5 text-base text-[#1B3A6B] focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
                 >
                   <option value="" disabled>
                     Choose a topic
@@ -197,7 +197,7 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="contact-message" className="mb-2 block text-sm font-semibold text-plum">
+                <label htmlFor="contact-message" className="mb-2 block text-sm font-semibold text-[#1B3A6B]">
                   Message
                 </label>
                 <textarea
@@ -206,7 +206,7 @@ export default function ContactForm() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full resize-y rounded-2xl border border-plum/20 bg-white px-5 py-3.5 text-base text-plum placeholder:text-plum/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full resize-y rounded-sm border border-plum/20 bg-white px-5 py-3.5 text-base text-[#1B3A6B] placeholder:text-[#1B3A6B]/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50"
                   placeholder="Tell me about your business and what you want more of."
                 />
               </div>
@@ -225,7 +225,7 @@ export default function ContactForm() {
               >
                 {status === "sending" ? "Sending…" : "Send my message"}
               </button>
-              <p className="text-center text-xs text-plum/60">{c.privacy}</p>
+              <p className="text-center text-xs text-[#1B3A6B]/60">{c.privacy}</p>
             </form>
           )}
         </Reveal>

@@ -40,14 +40,14 @@ export default function WhoIHelp() {
 
   return (
     <>
-      <section data-testid="who-i-help-section" className="py-12 sm:py-20">
+      <section data-testid="who-i-help-section" className="py-10 sm:py-14">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <Reveal>
-            <p className="eyebrow mb-6 text-plum/60">{c.eyebrow}</p>
-            <h2 className="font-display max-w-3xl text-balance text-3xl font-bold leading-tight text-plum sm:text-5xl">
+            <p className="eyebrow mb-6 text-[#1B3A6B]/60">{c.eyebrow}</p>
+            <h2 className="font-display max-w-3xl text-balance text-3xl font-bold leading-tight text-[#1B3A6B] sm:text-5xl">
               {c.heading}
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-body sm:text-lg">{c.intro}</p>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#3A4A66] sm:text-lg">{c.intro}</p>
           </Reveal>
         </div>
       </section>

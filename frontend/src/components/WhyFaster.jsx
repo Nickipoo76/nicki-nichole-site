@@ -11,21 +11,21 @@ export default function WhyFaster() {
   const x = useTransform(scrollYProgress, [0, 1], reduce ? ["0%", "0%"] : ["6%", "-6%"]);
 
   return (
-    <section ref={ref} data-testid="why-faster-section" className="relative overflow-hidden py-12 sm:py-20">
+    <section ref={ref} data-testid="why-faster-section" className="relative overflow-hidden py-10 sm:py-14">
       <motion.p
         aria-hidden="true"
         style={{ x }}
-        className="font-display pointer-events-none absolute top-8 left-0 select-none whitespace-nowrap text-[9rem] font-bold leading-none text-plum/[0.045] sm:text-[13rem]"
+        className="font-display pointer-events-none absolute top-8 left-0 select-none whitespace-nowrap text-[9rem] font-bold leading-none text-[#1B3A6B]/[0.045] sm:text-[13rem]"
       >
         skip the learning curve · skip the learning curve
       </motion.p>
       <div className="relative mx-auto max-w-6xl px-6 sm:px-8">
         <Reveal>
-          <p className="eyebrow mb-6 text-plum/60">{c.eyebrow}</p>
-          <h2 className="font-display max-w-3xl text-balance text-3xl font-semibold leading-tight text-plum sm:text-5xl">
+          <p className="eyebrow mb-6 text-[#1B3A6B]/60">{c.eyebrow}</p>
+          <h2 className="font-display max-w-3xl text-balance text-3xl font-semibold leading-tight text-[#1B3A6B] sm:text-5xl">
             {c.heading}
           </h2>
-          <p className="mt-8 max-w-2xl border-l-4 border-gold pl-6 text-base leading-relaxed text-body sm:text-lg">
+          <p className="mt-8 max-w-2xl border-l-4 border-gold pl-6 text-base leading-relaxed text-[#3A4A66] sm:text-lg">
             {c.text}
           </p>
         </Reveal>

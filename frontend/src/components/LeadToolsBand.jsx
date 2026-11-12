@@ -7,7 +7,7 @@ export default function LeadToolsBand() {
   return (
     <section data-testid="lead-tools-band" className="bg-blush pb-12 sm:pb-20">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <Reveal className="rounded-3xl bg-plum px-8 py-12 text-center shadow-[0_28px_60px_-24px_rgba(7,18,42,0.55)] sm:px-12">
+        <Reveal className="rounded-none border-t-4 border-gold bg-plum px-8 py-12 text-center shadow-[0_28px_60px_-24px_rgba(7,18,42,0.55)] sm:px-12">
           <h2 className="font-display text-balance text-2xl font-semibold leading-tight text-cream sm:text-4xl">
             {c.heading}
           </h2>

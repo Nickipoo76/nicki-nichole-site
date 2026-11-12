@@ -6,12 +6,12 @@ import { Reveal, stagger, staggerItem } from "../motion";
 export default function Services() {
   const c = content.services;
   return (
-    <section data-testid="services-section" className="bg-blush py-12 sm:py-20">
+    <section data-testid="services-section" className="bg-blush py-10 sm:py-14">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <Reveal className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="eyebrow mb-6 text-plum/60">{c.eyebrow}</p>
-            <h2 className="font-display max-w-2xl text-balance text-3xl font-semibold leading-tight text-plum sm:text-5xl">
+            <p className="eyebrow mb-6 text-[#1B3A6B]/60">{c.eyebrow}</p>
+            <h2 className="font-display max-w-2xl text-balance text-3xl font-semibold leading-tight text-[#1B3A6B] sm:text-5xl">
               {c.heading}
             </h2>
           </div>
@@ -33,7 +33,7 @@ export default function Services() {
               key={item.title}
               variants={staggerItem}
               data-testid={`service-card-${i}`}
-              className={`group relative overflow-hidden rounded-3xl bg-plum p-8 text-cream transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_54px_-18px_rgba(7,18,42,0.6)] ${
+              className={`group relative overflow-hidden rounded-none border-t-4 border-gold bg-plum p-8 text-cream transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_54px_-18px_rgba(7,18,42,0.6)] ${
                 i === 0 ? "md:col-span-2 lg:col-span-3" : "lg:col-span-3"
               }`}
             >
