@@ -70,6 +70,20 @@ export default function Nav() {
             {n.about}
           </Link>
           <Link
+            to="/#paths"
+            data-testid="nav-paths-link"
+            className="text-sm font-semibold text-plum no-underline transition-colors duration-300 hover:text-gold"
+          >
+            {n.paths}
+          </Link>
+          <Link
+            to="/?topic=hiring#contact"
+            data-testid="nav-hiring-link"
+            className="text-sm font-semibold text-plum no-underline transition-colors duration-300 hover:text-gold"
+          >
+            {n.hiring}
+          </Link>
+          <Link
             to="/#contact"
             data-testid="nav-contact-link"
             className="text-sm font-semibold text-plum no-underline transition-colors duration-300 hover:text-gold"
@@ -106,6 +120,8 @@ export default function Nav() {
               {[
                 { label: n.home, to: "/", tid: "mobile-nav-home" },
                 { label: n.about, to: "/about", tid: "mobile-nav-about" },
+                { label: n.paths, to: "/#paths", tid: "mobile-nav-paths" },
+                { label: n.hiring, to: "/?topic=hiring#contact", tid: "mobile-nav-hiring" },
                 { label: n.contact, to: "/#contact", tid: "mobile-nav-contact" },
               ].map((item, i) => (
                 <motion.div

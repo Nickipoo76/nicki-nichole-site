@@ -20,8 +20,9 @@ const content = {
   nav: {
     home: "Home",
     about: "About",
+    paths: "Work With Me",
+    hiring: "Hiring",
     contact: "Contact",
-    cta: "Book a free scan",
   },
 
   // ---- Homepage band: lead tools ------------------------------------------
@@ -44,22 +45,170 @@ const content = {
 
   // ---- Hero ---------------------------------------------------------------
   hero: {
-    // Rendered as one large headline, line by line. "accent" gets a gold underline.
-    lines: [
-      [{ text: "Leads on demand.", accent: true }],
-      [{ text: "Clients on", accent: false }, { text: "repeat.", accent: false }],
-    ],
+    eyebrow: "Hi, I'm Nicki Nichole.",
+    title: "Lead generation strategist for trust-based businesses.",
+    hook: "Entrepreneur \u00d7 Corporate Baddie. On purpose.",
     subhead:
-      "20+ years generating leads for trust-based businesses. I bring new clients in, turn more of them into paying clients, and keep them coming back.",
-    primaryCta: "Book my free Lead Leak Scan",
-    secondaryCta: "Hiring? See what I bring to your team",
+      "You have the vision and the attention. I build the systems and the business behind it: marketing, lead generation, and AI and sales automation, backed by 20+ years in marketing, real estate and tax.",
     headshot: {
       src: "/images/headshot-main.jpg",
       alt: "Nicki Nichole smiling with arms crossed, wearing a white blazer.",
       width: 355,
       height: 427,
     },
-    badges: ["Lead Generation", "Real Estate", "Tax", "Business Building"],
+    badges: ["Marketing", "Lead Generation", "AI + Sales Automation", "Real Estate", "Tax"],
+  },
+
+  // ---- One skill, every business ------------------------------------------
+  pillars: {
+    heading: "One skill runs every business I touch.",
+    gold: "Lead generation.",
+    intro:
+      "I don't just market businesses. I build and run them, and every one of them lives or dies on the same thing: getting the right people to call, and calling them back.",
+    items: [
+      {
+        value: "+40%",
+        name: "Marketing + AI automation",
+        text: "Campaigns, local visibility, CRM and automated follow-up that turn attention into booked clients.",
+      },
+      {
+        value: "$8M+",
+        name: "Real estate",
+        text: "New-home sales, wholesaling, and a way out for owners facing foreclosure, probate or divorce.",
+      },
+      {
+        value: "20+ yrs",
+        name: "Tax",
+        text: "Owner of an IRS-authorized e-file firm. Millions in client refunds, plus three offices launched as a consultant.",
+      },
+      {
+        value: "Sold out",
+        name: "Business building",
+        text: "LLCs, plans and SOPs for new owners, sold-out entrepreneur events, and thousands coached.",
+      },
+    ],
+  },
+
+  // ---- What brings you here? ------------------------------------------------
+  paths: {
+    heading: "What brings you here?",
+    intro: "Pick your lane. Each one ends with a direct line to me.",
+    cta: "Let's talk",
+    items: [
+      {
+        name: "I need more clients.",
+        tab: "More clients",
+        topic: "business",
+        items: [
+          "People find you online, then pick someone else.",
+          "Your calendar depends on who happens to call.",
+          "Leads come in, and follow-up falls through the cracks.",
+          "You're posting or paying for ads, and none of it turns into clients.",
+          "Past clients forget you between seasons.",
+          "Your events don't fill the room.",
+        ],
+        note: "Consulting, retainer or a focused project: lead generation, local visibility, follow-up systems, CRM and AI automation, retention and full-scale marketing.",
+      },
+      {
+        name: "I'm hiring.",
+        tab: "Hiring",
+        topic: "hiring",
+        items: [
+          "Lead generation, sales and conversion: 11% vs. a 3% team average.",
+          "Building and leading teams for my own tax firm.",
+          "Launching and running offices.",
+          "Filling rooms: booking speakers, marketing events, selling them out.",
+          "High-stakes client work: foreclosure, probate, divorce, wage garnishments.",
+        ],
+        note: "20+ years of hands-on marketing, sales and team building, plus the drive of someone who runs her own businesses. Open to marketing consultant roles.",
+      },
+      {
+        name: "I have a property situation.",
+        tab: "Property",
+        topic: "selling",
+        items: [
+          "You're behind on payments and facing foreclosure.",
+          "You inherited a house you don't want, and probate feels overwhelming.",
+          "You're divorcing and need a fair resolution on the house, without a court fight.",
+          "You need to sell as-is, in any condition.",
+          "You want your first rental property.",
+          "You found a deal and need the funding to close it.",
+        ],
+        note: "I'll make you a fair, as-is offer, or connect you with funding for your deal.",
+      },
+      {
+        name: "I need my taxes done.",
+        tab: "Taxes",
+        topic: "taxes",
+        items: [
+          "Personal and business returns.",
+          "Same-day refund advances available.",
+          "Back taxes and unfiled years.",
+          "IRS letters, corrections and amendments.",
+        ],
+        note: "Handled by my IRS-authorized e-file firm, with 20+ years behind it.",
+      },
+      {
+        name: "I want another income stream.",
+        tab: "New income",
+        topic: "learn",
+        items: [
+          "Start wholesaling real estate.",
+          "Launch your own tax business.",
+          "Become a notary or loan signing agent.",
+          "Get your own trucking authority.",
+          "Form your LLC, with the operating agreement, plans and SOPs behind it.",
+        ],
+        note: "Learn it from someone who has done every one of these, not someone who read about them.",
+      },
+    ],
+  },
+
+  // ---- Testimonials (from Google + Facebook reviews on her business sites) --
+  testimonials: {
+    heading: "Don't take my word for it.",
+    items: [
+      {
+        quote: "Nichole is the best marketing partner you can ever have. She is patient and she is willing to help you every step of the way to make sure that you are successful.",
+        name: "Tiffany Nicole",
+        role: "Marketing client",
+      },
+      {
+        quote: "For years Nicki has handled my complicated business taxes with professionalism, expertise, and genuine care.",
+        name: "Shantae",
+        role: "Business tax client",
+      },
+      {
+        quote: "I highly recommend Nichole for her work. She is reliable, detail-oriented, and consistently goes above and beyond to help navigate complex branding situations with clarity and patience.",
+        name: "Gina R.",
+        role: "Branding client",
+      },
+      {
+        quote: "She is very knowledgeable and gives it to you straight. No cutting corners or anything.",
+        name: "Tashia B.",
+        role: "Client",
+      },
+      {
+        quote: "Nicki is amazing & the strategies she give to scale is amazing",
+        name: "Monica A.",
+        role: "Marketing client",
+      },
+    ],
+  },
+
+  // ---- Recent work (hidden until an image is added) -------------------------
+  recentWork: {
+    heading: "Recent work",
+    image: "", // e.g. "/images/flyer.jpg" — section stays hidden while empty
+    alt: "",
+    caption: "",
+  },
+
+  // ---- Story teaser -----------------------------------------------------------
+  story: {
+    hello: "Hi, I'm Nichole. Most people call me Nicki.",
+    text: "I started out selling new homes in Atlanta, built my own tax firm, wholesaled millions in real estate and sold out rooms full of entrepreneurs. Different industries, same playbook: find the right people, say the right thing, and follow up until it closes.",
+    cta: "Read my story",
   },
 
   // ---- Proof strip --------------------------------------------------------
@@ -336,8 +485,8 @@ const content = {
   // ---- Contact -----------------------------------------------------------------------
   contact: {
     eyebrow: "Contact",
-    heading: "Let's find your leaks, and plug them.",
-    intro: "Tell me about your business and what you want more of. I read every message myself.",
+    heading: "Let's talk.",
+    intro: "Tell me what you're building, or what you need off your plate. I read every message myself.",
     location: "", // leave empty to hide
     topics: [
       { value: "tax", label: "Tax business" },

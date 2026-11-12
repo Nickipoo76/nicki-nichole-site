@@ -1,12 +1,11 @@
 import Hero from "../components/Hero";
 import ProofStrip from "../components/ProofStrip";
-import WhoIHelp from "../components/WhoIHelp";
-import Services from "../components/Services";
-import WhyFaster from "../components/WhyFaster";
+import Pillars from "../components/Pillars";
 import Proof from "../components/Proof";
-import MoreWays from "../components/MoreWays";
-import WorkWithMe from "../components/WorkWithMe";
-import Monroe from "../components/Monroe";
+import Paths from "../components/Paths";
+import Testimonials from "../components/Testimonials";
+import RecentWork from "../components/RecentWork";
+import Story from "../components/Story";
 import ContactForm from "../components/ContactForm";
 
 export default function Home() {
@@ -14,13 +13,12 @@ export default function Home() {
     <main>
       <Hero />
       <ProofStrip />
-      <WhoIHelp />
-      <Services />
-      <WhyFaster />
+      <Pillars />
       <Proof />
-      <MoreWays />
-      <WorkWithMe />
-      <Monroe />
+      <Paths />
+      <Testimonials />
+      <RecentWork />
+      <Story />
       <ContactForm />
     </main>
   );

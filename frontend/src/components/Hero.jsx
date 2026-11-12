@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import content from "../content";
-import { EASE, MaskedLine } from "../motion";
+import { EASE } from "../motion";
 
 // Full-width navy hero with the headshot cutout standing on a gold rule (matches About).
 export default function Hero() {
@@ -13,35 +13,39 @@ export default function Hero() {
         <div className="pb-6 lg:pb-14">
           <motion.p
             data-testid="hero-eyebrow"
-            className="eyebrow mb-6 text-gold"
+            className="mb-5 text-lg font-semibold text-gold sm:text-xl"
             initial={{ opacity: 0, x: -16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
           >
-            {content.site.name}
+            {h.eyebrow}
           </motion.p>
 
-          <h1
+          <motion.h1
             data-testid="hero-headline"
-            className="font-display text-balance text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl"
+            className="font-display text-balance text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4.25rem]"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
           >
-            {h.lines.map((line, i) => (
-              <MaskedLine key={i} delay={0.25 + i * 0.14}>
-                {line.map((seg, j) => (
-                  <span key={j} className={i === 1 ? "italic text-gold" : undefined}>
-                    {seg.text}{" "}
-                  </span>
-                ))}
-              </MaskedLine>
-            ))}
-          </h1>
+            {h.title}
+          </motion.h1>
+
+          <motion.p
+            className="font-display mt-5 text-2xl font-bold italic text-gold sm:text-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
+          >
+            {h.hook}
+          </motion.p>
 
           <motion.p
             data-testid="hero-subhead"
-            className="mt-7 max-w-xl text-lg font-semibold leading-snug text-white sm:text-xl"
+            className="mt-6 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
+            transition={{ duration: 0.8, delay: 0.65, ease: EASE }}
           >
             {h.subhead}
           </motion.p>
