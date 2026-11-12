@@ -253,7 +253,7 @@ const content = {
     owners: {
       heading: "For business owners",
       text: "Consulting, retainer or a focused project. I find where leads are slipping, fix it, and set up systems your team can keep running.",
-      cta: "Book my free Lead Leak Scan",
+      cta: "Let's talk",
     },
     hiring: {
       heading: "For hiring teams",

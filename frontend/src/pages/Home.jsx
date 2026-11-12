@@ -2,7 +2,6 @@ import Hero from "../components/Hero";
 import ProofStrip from "../components/ProofStrip";
 import WhoIHelp from "../components/WhoIHelp";
 import Services from "../components/Services";
-import LeadToolsBand from "../components/LeadToolsBand";
 import WhyFaster from "../components/WhyFaster";
 import Proof from "../components/Proof";
 import MoreWays from "../components/MoreWays";
@@ -17,7 +16,6 @@ export default function Home() {
       <ProofStrip />
       <WhoIHelp />
       <Services />
-      <LeadToolsBand />
       <WhyFaster />
       <Proof />
       <MoreWays />

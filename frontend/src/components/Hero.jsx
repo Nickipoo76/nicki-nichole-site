@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import content from "../content";
 import { EASE, MaskedLine } from "../motion";
 
@@ -47,30 +45,6 @@ export default function Hero() {
           >
             {h.subhead}
           </motion.p>
-
-          <motion.div
-            className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.05, ease: EASE }}
-          >
-            <a href={content.links.booking} data-testid="hero-primary-cta" className="btn-gold">
-              {h.primaryCta}
-              <ArrowRight size={18} aria-hidden="true" />
-            </a>
-            <Link
-              to="/#work-with-me"
-              data-testid="hero-secondary-cta"
-              className="group inline-flex items-center gap-2 text-base font-semibold text-white no-underline"
-            >
-              <span className="u-gold">{h.secondaryCta}</span>
-              <ArrowRight
-                size={18}
-                aria-hidden="true"
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
-          </motion.div>
 
           <motion.ul
             className="mt-8 flex flex-wrap gap-x-5 gap-y-2"

@@ -1,66 +1,39 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Briefcase, UserRound } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import content from "../content";
-import { Reveal, stagger, staggerItem } from "../motion";
+import { Reveal } from "../motion";
+
+const linkCls =
+  "mt-4 inline-flex items-center gap-2 font-semibold text-white underline decoration-gold decoration-2 underline-offset-4";
 
 export default function WorkWithMe() {
   const c = content.workWithMe;
   return (
-    <section id="work-with-me" data-testid="work-with-me-section" className="bg-blush py-10 sm:py-14">
+    <section id="work-with-me" data-testid="work-with-me-section" className="bg-plum py-10 text-white sm:py-14">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <Reveal>
-          <p className="eyebrow mb-6 text-[#1B3A6B]/60">{c.eyebrow}</p>
-          <h2 className="font-display text-balance text-3xl font-semibold leading-tight text-[#1B3A6B] sm:text-5xl">
-            {c.heading}
-          </h2>
+          <h2 className="font-display text-3xl font-bold italic text-gold sm:text-5xl">{c.heading}</h2>
+          <div className="mt-10 grid gap-x-12 gap-y-10 lg:grid-cols-2">
+            <div data-testid="work-owners-card" className="border-l-4 border-gold pl-5">
+              <h3 className="font-display text-2xl font-bold sm:text-3xl">{c.owners.heading}</h3>
+              <p className="mt-3 text-lg leading-relaxed text-white/85">{c.owners.text}</p>
+              <Link to="/?topic=business#contact" data-testid="work-owners-cta" className={linkCls}>
+                {c.owners.cta}
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </div>
+            <div data-testid="work-hiring-card" className="border-l-4 border-gold pl-5">
+              <h3 className="font-display text-2xl font-bold sm:text-3xl">{c.hiring.heading}</h3>
+              <p className="mt-3 text-lg leading-relaxed text-white/85">
+                {c.hiring.text.replace("{roles}", c.hiring.roles)}
+              </p>
+              <Link to={`/?topic=${c.hiring.topic}#contact`} data-testid="work-hiring-cta" className={linkCls}>
+                {c.hiring.cta}
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
         </Reveal>
-
-        <motion.div
-          className="mt-12 grid gap-6 lg:grid-cols-2"
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-        >
-          <motion.article
-            variants={staggerItem}
-            data-testid="work-owners-card"
-            className="flex flex-col rounded-none border-t-4 border-gold bg-plum p-9 text-cream transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_-20px_rgba(7,18,42,0.6)] sm:p-12"
-          >
-            <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-sm bg-gold text-plum-ink">
-              <Briefcase size={22} aria-hidden="true" />
-            </span>
-            <h3 className="font-display text-2xl font-semibold text-gold sm:text-3xl">{c.owners.heading}</h3>
-            <p className="mt-4 flex-1 text-base leading-relaxed text-cream/85">{c.owners.text}</p>
-            <a href={content.links.booking} data-testid="work-owners-cta" className="btn-gold mt-8 self-start">
-              {c.owners.cta}
-              <ArrowRight size={18} aria-hidden="true" />
-            </a>
-          </motion.article>
-
-          <motion.article
-            variants={staggerItem}
-            data-testid="work-hiring-card"
-            className="flex flex-col rounded-none border-t-4 border-gold bg-white/80 p-9 ring-1 ring-plum/10 backdrop-blur-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_-20px_rgba(11,26,52,0.3)] sm:p-12"
-          >
-            <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-sm bg-blush-deep text-[#1B3A6B]">
-              <UserRound size={22} aria-hidden="true" />
-            </span>
-            <h3 className="font-display text-2xl font-semibold text-[#1B3A6B] sm:text-3xl">{c.hiring.heading}</h3>
-            <p className="mt-4 flex-1 text-base leading-relaxed text-[#3A4A66]">
-              {c.hiring.text.replace("{roles}", c.hiring.roles)}
-            </p>
-            <Link
-              to={`/?topic=${c.hiring.topic}#contact`}
-              data-testid="work-hiring-cta"
-              className="btn-ghost mt-8 self-start text-[#1B3A6B] hover:bg-plum hover:text-cream"
-            >
-              {c.hiring.cta}
-              <ArrowRight size={18} aria-hidden="true" />
-            </Link>
-          </motion.article>
-        </motion.div>
       </div>
     </section>
   );

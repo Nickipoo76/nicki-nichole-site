@@ -1,73 +1,40 @@
-import { motion } from "framer-motion";
-import { ArrowUpRight, Building2, GraduationCap, HandCoins, ReceiptText, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import content from "../content";
-import { Reveal, stagger, staggerItem } from "../motion";
+import { Reveal } from "../motion";
 
-const icons = [Building2, HandCoins, ReceiptText, Rocket, GraduationCap];
+const NAVY = "text-[#1B3A6B]";
 
 export default function MoreWays() {
   const c = content.moreWays;
   return (
-    <section data-testid="more-ways-section" className="py-10 sm:py-14">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <Reveal>
-          <p className="eyebrow mb-6 text-[#1B3A6B]/60">{c.eyebrow}</p>
-          <h2 className="font-display max-w-3xl text-balance text-3xl font-bold leading-tight text-[#1B3A6B] sm:text-5xl">
-            {c.heading}
-          </h2>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#3A4A66] sm:text-lg">{c.intro}</p>
-        </Reveal>
-
-        <motion.div
-          className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-6"
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-        >
-          {c.cards.map((card, i) => {
-            const Icon = icons[i % icons.length];
-            const span = i < 3 ? "lg:col-span-2" : "lg:col-span-3";
-            const wide = i === c.cards.length - 1 && c.cards.length % 2 === 1 ? "sm:col-span-2 lg:col-span-3" : "";
-            return (
-              <motion.article
-                key={card.title}
-                variants={staggerItem}
-                data-testid={`more-ways-card-${i}`}
-                className={`card-surface flex flex-col p-7 transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_48px_-16px_rgba(11,26,52,0.28)] ${span} ${wide}`}
+    <section data-testid="more-ways-section" className="mx-auto max-w-6xl px-6 py-10 sm:px-8 sm:py-14">
+      <Reveal>
+        <p className={`eyebrow mb-4 ${NAVY}/60`}>{c.eyebrow}</p>
+        <h2 className={`font-display max-w-3xl text-balance text-3xl font-bold leading-tight sm:text-5xl ${NAVY}`}>
+          {c.heading}
+        </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#3A4A66]">{c.intro}</p>
+        <ul className="mt-10 grid gap-x-12 gap-y-8 sm:grid-cols-2">
+          {c.cards.map((card, i) => (
+            <li key={card.title} data-testid={`more-ways-card-${i}`} className="border-l-4 border-gold pl-5">
+              <h3 className={`font-display text-2xl font-bold ${NAVY}`}>{card.title}</h3>
+              <p className="mt-2 text-lg leading-relaxed text-[#3A4A66]">{card.text}</p>
+              <Link
+                to={`/?topic=${card.topic}#contact`}
+                data-testid={`more-ways-link-${card.topic}`}
+                className={`mt-3 inline-flex items-center gap-2 font-semibold underline decoration-gold decoration-2 underline-offset-4 ${NAVY}`}
               >
-                <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-sm bg-plum text-gold">
-                  <Icon size={22} aria-hidden="true" />
-                </span>
-                <h3 className="font-display text-xl font-bold text-[#1B3A6B]">{card.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-[#3A4A66]">{card.text}</p>
-                <Link
-                  to={`/?topic=${card.topic}#contact`}
-                  data-testid={`more-ways-link-${card.topic}`}
-                  className="group/link mt-6 inline-flex items-center gap-2 text-base font-semibold text-[#1B3A6B] no-underline"
-                >
-                  <span className="u-gold">{card.linkText}</span>
-                  <ArrowUpRight
-                    size={18}
-                    aria-hidden="true"
-                    className="transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
-                  />
-                </Link>
-              </motion.article>
-            );
-          })}
-        </motion.div>
-
-        <Reveal delay={0.15}>
-          <p
-            data-testid="more-ways-note"
-            className="font-display mx-auto mt-12 max-w-3xl text-center text-xl italic leading-relaxed text-[#1B3A6B] sm:text-2xl"
-          >
-            &ldquo;{c.note}&rdquo;
-          </p>
-        </Reveal>
-      </div>
+                {card.linkText}
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p data-testid="more-ways-note" className={`font-display mt-12 max-w-3xl text-xl italic leading-relaxed sm:text-2xl ${NAVY}`}>
+          {c.note}
+        </p>
+      </Reveal>
     </section>
   );
 }

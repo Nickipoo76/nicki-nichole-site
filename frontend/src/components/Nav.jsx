@@ -76,13 +76,6 @@ export default function Nav() {
           >
             {n.contact}
           </Link>
-          <a
-            href={content.links.booking}
-            data-testid="nav-cta-button"
-            className="btn-gold !px-6 !py-2.5 !text-sm"
-          >
-            {n.cta}
-          </a>
         </div>
 
         <button
@@ -132,20 +125,6 @@ export default function Nav() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.46, duration: 0.5, ease: EASE }}
-              >
-                <a
-                  href={content.links.booking}
-                  data-testid="mobile-nav-cta"
-                  className="btn-gold mt-4"
-                  onClick={() => setOpen(false)}
-                >
-                  {n.cta}
-                </a>
-              </motion.div>
             </nav>
           </motion.div>
         )}

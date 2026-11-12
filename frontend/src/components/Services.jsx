@@ -1,57 +1,26 @@
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import content from "../content";
-import { Reveal, stagger, staggerItem } from "../motion";
+import { Reveal } from "../motion";
+
+const NAVY = "text-[#1B3A6B]";
 
 export default function Services() {
   const c = content.services;
   return (
-    <section data-testid="services-section" className="bg-blush py-10 sm:py-14">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <Reveal className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="eyebrow mb-6 text-[#1B3A6B]/60">{c.eyebrow}</p>
-            <h2 className="font-display max-w-2xl text-balance text-3xl font-semibold leading-tight text-[#1B3A6B] sm:text-5xl">
-              {c.heading}
-            </h2>
-          </div>
-          <a href={content.links.booking} data-testid="services-cta" className="btn-gold shrink-0">
-            {c.cta}
-            <ArrowRight size={18} aria-hidden="true" />
-          </a>
-        </Reveal>
-
-        <motion.div
-          className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-6"
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-        >
+    <section data-testid="services-section" className="mx-auto max-w-6xl px-6 py-10 sm:px-8 sm:py-14">
+      <Reveal>
+        <p className={`eyebrow mb-4 ${NAVY}/60`}>{c.eyebrow}</p>
+        <h2 className={`font-display max-w-3xl text-balance text-3xl font-bold leading-tight sm:text-5xl ${NAVY}`}>
+          {c.heading}
+        </h2>
+        <ul className="mt-10 grid gap-x-12 gap-y-8 sm:grid-cols-2">
           {c.items.map((item, i) => (
-            <motion.article
-              key={item.title}
-              variants={staggerItem}
-              data-testid={`service-card-${i}`}
-              className={`group relative overflow-hidden rounded-none border-t-4 border-gold bg-plum p-8 text-cream transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_54px_-18px_rgba(7,18,42,0.6)] ${
-                i === 0 ? "md:col-span-2 lg:col-span-3" : "lg:col-span-3"
-              }`}
-            >
-              <span
-                aria-hidden="true"
-                className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/15 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
-              />
-              {i === 0 && (
-                <span className="mb-4 inline-block rounded-full bg-gold px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-plum-ink">
-                  Start here
-                </span>
-              )}
-              <h3 className="font-display text-2xl font-semibold leading-snug text-gold">{item.title}</h3>
-              <p className="mt-3 text-base leading-relaxed text-cream/85">{item.text}</p>
-            </motion.article>
+            <li key={item.title} data-testid={`service-card-${i}`} className="border-l-4 border-gold pl-5">
+              <h3 className={`font-display text-2xl font-bold ${NAVY}`}>{item.title}</h3>
+              <p className="mt-2 text-lg leading-relaxed text-[#3A4A66]">{item.text}</p>
+            </li>
           ))}
-        </motion.div>
-      </div>
+        </ul>
+      </Reveal>
     </section>
   );
 }
