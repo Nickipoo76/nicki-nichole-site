@@ -40,7 +40,7 @@ const content = {
     instagram: "https://www.instagram.com/accelerate.marketing/",
     tiktok: "https://tiktok.com/@wholesalingwithnicki",
     linkedin: "https://www.linkedin.com/in/nicholepaul",
-    email: "support@iconicho.com",
+    email: "", // hidden from the site
   },
 
   // ---- Hero ---------------------------------------------------------------
@@ -82,9 +82,9 @@ const content = {
         text: "Owner of an IRS-authorized e-file firm. Millions in client refunds, plus three offices launched as a consultant.",
       },
       {
-        value: "Sold out",
-        name: "Business building",
-        text: "LLCs, plans and SOPs for new owners, sold-out entrepreneur events, and thousands coached.",
+        value: "Thousands",
+        name: "Business building + teaching",
+        text: "Coached through conferences, mentoring and my groups. I also form LLCs with the plans and SOPs behind them for new owners.",
       },
     ],
   },
