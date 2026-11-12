@@ -13,7 +13,7 @@ const content = {
     url: "https://nickinichole.com",
     metaTitle: "Nicki Nichole | Lead Generation for Trust-Based Businesses",
     metaDescription:
-      "20+ years generating leads for trust-based businesses. Nicki Nichole helps tax pros, real estate agents and entrepreneurs attract more leads, convert them faster and keep clients coming back.",
+      "25+ years generating leads for trust-based businesses. Nicki Nichole helps tax pros, real estate agents and entrepreneurs attract more leads, convert them faster and keep clients coming back.",
     ogImage: "/images/og-image.jpg",
   },
 
@@ -49,7 +49,7 @@ const content = {
     title: "Lead generation strategist for trust-based businesses.",
     hook: "Entrepreneur \u00d7 Corporate Baddie. On purpose.",
     subhead:
-      "You have the vision and the attention. I build the systems and the business behind it: marketing, lead generation, and AI and sales automation, backed by 20+ years in marketing, real estate and tax.",
+      "You have the vision and the attention. I build the systems and the business behind it: marketing, lead generation, and AI and sales automation, backed by 25+ years in marketing, real estate and tax.",
     headshot: {
       src: "/images/headshot-main.jpg",
       alt: "Nicki Nichole smiling with arms crossed, wearing a white blazer.",
@@ -77,7 +77,7 @@ const content = {
         text: "New-home sales, wholesaling, and a way out for owners facing foreclosure, probate or divorce.",
       },
       {
-        value: "20+ yrs",
+        value: "25+ yrs",
         name: "Tax",
         text: "Owner of an IRS-authorized e-file firm. Millions in client refunds, plus three offices launched as a consultant.",
       },
@@ -120,7 +120,7 @@ const content = {
           "Filling rooms: booking speakers, marketing events, selling them out.",
           "High-stakes client work: foreclosure, probate, divorce, wage garnishments.",
         ],
-        note: "20+ years of hands-on marketing, sales and team building, plus the drive of someone who runs her own businesses. Open to marketing consultant roles.",
+        note: "25+ years of hands-on marketing, sales and team building, plus the drive of someone who runs her own businesses. Open to marketing consultant roles.",
       },
       {
         name: "I have a property situation.",
@@ -146,7 +146,7 @@ const content = {
           "Back taxes and unfiled years.",
           "IRS letters, corrections and amendments.",
         ],
-        note: "Handled by my IRS-authorized e-file firm, with 20+ years behind it.",
+        note: "Handled by my IRS-authorized e-file firm, with 25+ years behind it.",
       },
       {
         name: "I want another income stream.",
@@ -213,7 +213,7 @@ const content = {
 
   // ---- Proof strip --------------------------------------------------------
   proofStrip: [
-    "20+ years generating leads for trust-based businesses",
+    "25+ years generating leads for trust-based businesses",
     "Millions in real estate sold",
     "$8M+ in real estate assets secured",
     "Rookie of the Year",
@@ -407,7 +407,7 @@ const content = {
     hiring: {
       heading: "For hiring teams",
       // {roles} is replaced with the roles string below
-      text: "20+ years of hands-on lead generation, sales, conversion and team building for trust-based businesses, plus the drive of someone who runs her own businesses. Open to {roles}.",
+      text: "25+ years of hands-on lead generation, sales, conversion and team building for trust-based businesses, plus the drive of someone who runs her own businesses. Open to {roles}.",
       roles: "marketing consultant roles",
       cta: "Let's talk",
       topic: "hiring",
@@ -430,7 +430,7 @@ const content = {
   about: {
     hookTop: "Entrepreneur \u00d7 Corporate Baddie.",
     hookGold: "On purpose.",
-    subhook: "20+ years in marketing, real estate and tax. And I'm still building.",
+    subhook: "25+ years in marketing, real estate and tax. And I'm still building.",
     hello: "Hi, I'm Nichole. Most people call me Nicki.",
     cutout: {
       src: "/images/headshot-cutout.png",
@@ -443,7 +443,7 @@ const content = {
       { value: "$8M+", label: "in real estate assets secured" },
       { value: "$4M+", label: "in real estate wholesaled" },
       { value: "Millions", label: "in tax refunds for my clients" },
-      { value: "20+ years", label: "in real estate and tax" },
+      { value: "25+ years", label: "in real estate and tax" },
       { value: "Thousands", label: "coached at conferences, in mentoring and in my Facebook groups" },
       { value: "Sold out", label: "entrepreneur events I hosted" },
     ],
@@ -458,7 +458,7 @@ const content = {
       },
       {
         title: "Tax has been running in the background this whole time.",
-        text: "For more than 20 years. My IRS-authorized e-file firm has helped clients receive millions in refunds, save thousands and stop wage garnishments, which makes me very popular in the spring. I launched three tax offices as a consultant, and my firm keeps serving clients with a team I built and oversee. During tax season, I also manage a local office and organize marketing events for a major tax and accounting firm. That's the corporate baddie part. Nobody made me. I like it.",
+        text: "For more than 25 years. My IRS-authorized e-file firm has helped clients receive millions in refunds, save thousands and stop wage garnishments, which makes me very popular in the spring. I launched three tax offices as a consultant, and my firm keeps serving clients with a team I built and oversee. During tax season, I also manage a local office and organize marketing events for a major tax and accounting firm. That's the corporate baddie part. Nobody made me. I like it.",
       },
       {
         title: "And I can't keep any of it to myself.",
