@@ -462,7 +462,7 @@ const content = {
       },
       {
         title: "And I can't keep any of it to myself.",
-        text: "I've taught wholesaling, Airbnb arbitrage, notary and loan-signing work, and how to get a trucking authority. I've formed LLCs and written the business plans, operating agreements, marketing plans and SOPs behind them. I hosted sold-out entrepreneur events, booked the speakers, promoted every one, and gave new business owners discounted vendor spots, because everybody deserves a table before they can afford one. I've also served on the boards of a startup and a book club. Only one of those had required reading.",
+        text: "Helping new entrepreneurs has been my greatest achievement. I've taught new and aspiring real estate wholesalers how to get started and scale their businesses. As a former Airbnb Superhost, I've consulted others on Airbnb arbitrage. I've helped ambitious truck drivers get their own DOT authority and go from employee to business owner, and I've helped side hustlers turn their work into legit, viable businesses. I've also taught notary and loan-signing work. I've formed LLCs and written the business plans, operating agreements, marketing plans and SOPs behind them. I hosted sold-out entrepreneur events, booked the speakers, promoted every one, and gave new business owners discounted vendor spots, because everybody deserves a table before they can afford one. I've also served on the boards of a startup and a book club. Only one of those had required reading.",
       },
     ],
     awardsLabel: "The receipts",
